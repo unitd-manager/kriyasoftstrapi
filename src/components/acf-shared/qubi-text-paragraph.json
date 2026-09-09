@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_acf_shared_qubi_text_paragraphs",
+  "info": {
+    "displayName": "Qubi Text Paragraph"
+  },
+  "pluginOptions": {
+    "content-manager": {
+      "mainField": "label"
+    }
+  },
+  
+
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+}
+  }
+}

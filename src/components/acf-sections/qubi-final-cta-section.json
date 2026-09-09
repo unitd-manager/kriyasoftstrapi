@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_acf_sections_qubi_final_cta_section",
+  "info": {
+    "displayName": "Qubi Final CTA Section"
+  },
+  "attributes": {
+    "main_title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "richtext"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "button": {
+      "type": "component",
+      "component": "shared.menu-item",
+      "repeatable": false
+    },
+    "secondary_button": {
+      "type": "component",
+      "component": "shared.menu-item",
+      "repeatable": false
+    }
+  }
+}

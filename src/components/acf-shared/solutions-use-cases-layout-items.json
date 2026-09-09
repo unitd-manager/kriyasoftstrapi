@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_acf_shared_solutions_use_cases_layout_items",
+  "info": {
+    "displayName": "Solutions Use Case Item"
+  },
+  "attributes": {
+    "icon": { "type": "string" },
+    "categoryLabel": { "type": "string" },
+    "title": { "type": "string" },
+    "description": { "type": "text" },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "stats": {
+      "type": "component",
+      "repeatable": true,
+      "component": "acf-shared.solutions-use-cases-layout-stat-item"
+    }
+  }
+}

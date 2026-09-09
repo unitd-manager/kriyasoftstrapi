@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_acf_shared_qubi_integration_items",
+  "info": {
+    "displayName": "Qubi Integration Section Integration Items"
+  },
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "label": {
+      "type": "text"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "count": {
+      "type": "string"
+    }
+  }
+}

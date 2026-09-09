@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_acf_sections_qubi_services_lists",
+  "info": { "displayName": "Qubi Services List" },
+  "attributes": {
+    "eyebrow": { "type": "string" },
+    "title": { "type": "text" },
+    "description": { "type": "richtext" },
+    "items": { "type": "json" }
+  }
+}

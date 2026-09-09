@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "footers",
+  "info": {
+    "displayName": "Footer",
+    "singularName": "footer",
+    "pluralName": "footers",
+    "description": "The whole site footer in one place: company name and its links."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "copyright_text": {
+      "type": "string"
+    },
+    "publish": {
+      "type": "boolean",
+      "default": true
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.menu-item"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_acf_sections_footers",
+  "info": {
+    "displayName": "footer"
+  },
+  "options": {},
+  "attributes": {
+    "copyright_text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

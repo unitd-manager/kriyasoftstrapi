@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_acf_sections_qubi_story_sections",
+  "info": {
+    "displayName": "Qubi Story Section",
+    "description": "Eyebrow, heading, story paragraphs, and a row of stat cards"
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "main_title": {
+      "type": "text"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "paragraphs": {
+      "type": "component",
+      "component": "acf-shared.qubi-text-paragraph",
+      "repeatable": true
+    },
+    "stats": {
+      "type": "component",
+      "component": "acf-shared.qubi-stat-item",
+      "repeatable": true
+    }
+  }
+}

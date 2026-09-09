@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_acf_shared_qubi_case_metrics",
+  "info": {
+    "displayName": "Qubi Case Metric"
+  },
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "metric_type": {
+      "type": "enumeration",
+      "enum": ["before_after", "reduction", "value"],
+      "default": "value"
+    },
+    "primary_value": {
+      "type": "string"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "secondary_value": {
+      "type": "string"
+    }
+  }
+}

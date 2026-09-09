@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_acf_sections_qubi_how_it_works_section",
+  "info": {
+    "displayName": "Qubi How It Works Section"
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "main_title": {
+      "type": "text"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "steps": {
+      "type": "component",
+      "component": "acf-shared.qubi-how-it-works-section-steps",
+      "repeatable": true
+    }
+  }
+}

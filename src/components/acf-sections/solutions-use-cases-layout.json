@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_acf_sections_solutions_use_cases_layouts",
+  "info": { "displayName": "Solutions - Use Cases Layout", "icon": "grid" },
+  "attributes": {
+    "eyebrowLabel": { "type": "string" },
+    "heading": { "type": "string" },
+    "highlightedHeading": { "type": "string" },
+    "description": { "type": "text" },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "useCases": { "type": "component", "repeatable": true, "component": "acf-shared.solutions-use-cases-layout-items" }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_acf_sections_qubi_integration_section",
+  "info": {
+    "displayName": "Qubi Integration Section"
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "main_title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "richtext"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "integration_items": {
+      "type": "component",
+      "component": "acf-shared.qubi-integration-section-integration-items",
+      "repeatable": true
+    }
+  }
+}

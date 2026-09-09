@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_acf_sections_qubi_human_in_loop",
+  "info": {
+    "displayName": "Qubi Human In Loop Section"
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "main_title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "richtext"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "badges": {
+      "type": "component",
+      "component": "acf-shared.qubi-human-in-loop-section-badges",
+      "repeatable": true
+    },
+    "button": {
+      "type": "component",
+      "component": "shared.menu-item",
+      "repeatable": false
+    }
+  }
+}

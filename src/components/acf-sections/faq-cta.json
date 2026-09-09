@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_acf_sections_faq_ctas",
+  "info": {
+    "displayName": "faq-cta"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "primary_cta_label": {
+      "type": "string"
+    },
+    "primary_cta_link": {
+      "type": "string"
+    },
+    "secondary_cta_label": {
+      "type": "string"
+    },
+     "Publish": {
+   "type": "boolean",
+   "default": true
+},
+    "secondary_cta_link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_acf_sections_qubi_demo_preview",
+  "info": {
+    "displayName": "Qubi Demo Preview"
+  },
+  "attributes": {
+    "video_title": {
+      "type": "text"
+    },
+    "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "video_duration": {
+      "type": "string"
+    },
+    "video_url": {
+      "type": "text"
+    }
+  }
+}
