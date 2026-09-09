@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_acf_shared_qubi_capability_items",
+  "info": {
+    "displayName": "Qubi Capabilities Section Capability Items"
+  },
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

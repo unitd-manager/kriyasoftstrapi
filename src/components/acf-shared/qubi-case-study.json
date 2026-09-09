@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_acf_shared_qubi_case_studies",
+  "info": {
+    "displayName": "Qubi Case Study"
+  },
+  "attributes": {
+    "industry": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "challenge": {
+      "type": "text"
+    },
+    "solution": {
+      "type": "text"
+    },
+    "quote": {
+      "type": "text"
+    },
+    "quote_role": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "image_url": {
+      "type": "string"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "metrics": {
+      "type": "component",
+      "repeatable": true,
+      "component": "acf-shared.qubi-case-metric"
+    }
+  }
+}

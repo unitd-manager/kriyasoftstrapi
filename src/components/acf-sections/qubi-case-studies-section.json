@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_acf_sections_qubi_case_studies_sections",
+  "info": {
+    "displayName": "Qubi Case Studies Section",
+    "description": "Section heading plus large case-study cards with challenge, solution, quote, and result metrics"
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "main_title": {
+      "type": "text"
+    },
+    "case_studies": {
+      "type": "component",
+      "component": "acf-shared.qubi-case-study",
+      "repeatable": true
+    }
+  }
+}

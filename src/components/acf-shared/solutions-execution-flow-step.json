@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_acf_shared_solutions_execution_flow_steps",
+  "info": {
+    "displayName": "Solutions Execution Flow Step"
+  },
+  "attributes": {
+    "icon": { "type": "string" },
+    "title": { "type": "string" },
+    "description": { "type": "text" },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+}
+  }
+}

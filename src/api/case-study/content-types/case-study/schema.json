@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_studies",
+  "info": {
+    "displayName": "Case Study",
+    "singularName": "case-study",
+    "pluralName": "case-studies",
+    "description": "Case studies displayed on the Kriyasoft website."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "slug": { "type": "uid", "targetField": "title", "required": true },
+    "industry": { "type": "string", "required": true },
+    "result": { "type": "string" },
+    "summary": { "type": "text" },
+    "challenge": { "type": "text" },
+    "solution": { "type": "json" },
+    "phases": { "type": "json" },
+    "outcomes": { "type": "json" },
+    "stack": { "type": "json" },
+    "quote": { "type": "json" },
+    "readTime": { "type": "string" },
+    "date": { "type": "date" },
+    "image": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "secondaryImage": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "sortOrder": { "type": "integer", "default": 0 }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "name": "Strapi image optimization and SEO",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "strapi-image-optimization",
+        "authentication": "headerAuth",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "id": "1",
+      "name": "Strapi image event",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [260, 300],
+      "webhookId": "strapi-image-optimization"
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $json.body ?? $json;\nconst file = body.file;\nif (body.event !== 'media.created' || !file?.id || !file.url || !file.mime?.startsWith('image/')) {\n  return [];\n}\nreturn [{ json: { fileId: file.id, originalName: file.name, originalUrl: file.url, originalMime: file.mime, originalAlternativeText: file.alternativeText ?? '', strapiBaseUrl: $env.STRAPI_URL, strapiToken: $env.STRAPI_API_TOKEN, cloudinaryCloudName: $env.CLOUDINARY_CLOUD_NAME, cloudinaryUploadPreset: $env.CLOUDINARY_UPLOAD_PRESET } }];"
+      },
+      "id": "2",
+      "name": "Validate image event",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [500, 300]
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.originalUrl.startsWith('http') ? $json.originalUrl : $json.strapiBaseUrl + $json.originalUrl }}",
+        "options": {},
+        "response": { "response": { "responseFormat": "file" } }
+      },
+      "id": "3",
+      "name": "Download original",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [740, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ 'https://api.cloudinary.com/v1_1/' + $json.cloudinaryCloudName + '/image/upload' }}",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": { "parameters": [ { "name": "upload_preset", "value": "={{ $json.cloudinaryUploadPreset }}" }, { "name": "filename_override", "value": "={{ $json.originalName }}" }, { "name": "file", "parameterType": "formBinaryData", "inputDataFieldName": "data" } ] },
+        "options": {}
+      },
+      "id": "4",
+      "name": "Optimize as WebP",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [980, 300]
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.secure_url }}",
+        "options": {},
+        "response": { "response": { "responseFormat": "file" } }
+      },
+      "id": "5",
+      "name": "Download optimized WebP",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1220, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $node['Validate image event'].json.strapiBaseUrl + '/api/upload' }}",
+        "sendHeaders": true,
+        "headerParameters": { "parameters": [ { "name": "Authorization", "value": "={{ 'Bearer ' + $node['Validate image event'].json.strapiToken }}" } ] },
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": { "parameters": [ { "name": "file", "parameterType": "formBinaryData", "inputDataFieldName": "data" }, { "name": "fileInfo", "value": "={{ JSON.stringify({ name: $node['Validate image event'].json.originalName.replace(/\\.[^.]+$/, '') + '.optimized.webp', alternativeText: $node['Validate image event'].json.originalAlternativeText || $node['Validate image event'].json.originalName.replace(/\\.[^.]+$/, '').replace(/[-_]+/g, ' ') }) }}" } ] },
+        "options": {}
+      },
+      "id": "6",
+      "name": "Upload optimized file to Strapi",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1460, 300]
+    },
+    {
+      "parameters": {
+        "method": "DELETE",
+        "url": "={{ $node['Validate image event'].json.strapiBaseUrl + '/api/upload/files/' + $node['Validate image event'].json.fileId }}",
+        "sendHeaders": true,
+        "headerParameters": { "parameters": [ { "name": "Authorization", "value": "={{ 'Bearer ' + $node['Validate image event'].json.strapiToken }}" } ] },
+        "options": {}
+      },
+      "id": "7",
+      "name": "Delete original file",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1700, 300]
+    }
+  ],
+  "connections": {
+    "Strapi image event": { "main": [[{ "node": "Validate image event", "type": "main", "index": 0 }]] },
+    "Validate image event": { "main": [[{ "node": "Download original", "type": "main", "index": 0 }]] },
+    "Download original": { "main": [[{ "node": "Optimize as WebP", "type": "main", "index": 0 }]] },
+    "Optimize as WebP": { "main": [[{ "node": "Download optimized WebP", "type": "main", "index": 0 }]] },
+    "Download optimized WebP": { "main": [[{ "node": "Upload optimized file to Strapi", "type": "main", "index": 0 }]] },
+    "Upload optimized file to Strapi": { "main": [[{ "node": "Delete original file", "type": "main", "index": 0 }]] }
+  },
+  "active": false,
+  "settings": { "executionOrder": "v1" },
+  "versionId": "strapi-image-optimization-v1",
+  "meta": { "templateCredsSetupCompleted": false },
+  "tags": []
+}

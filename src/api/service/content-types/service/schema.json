@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "displayName": "Service",
+    "singularName": "service",
+    "pluralName": "services",
+    "description": "Services displayed on the Kriyasoft website."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "slug": { "type": "uid", "targetField": "title", "required": true },
+    "blurb": { "type": "text" },
+    "tags": { "type": "json" },
+    "points": { "type": "json" },
+    "icon": { "type": "string" },
+    "sortOrder": { "type": "integer", "default": 0 }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_acf_sections_demo_sections_heroes",
+  "info": {
+    "displayName": "demo-sections.hero"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow_text": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "highlighted_word": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "cta_label": {
+      "type": "string"
+    },
+    "cta_link": {
+      "type": "string"
+    },
+     "Publish": {
+   "type": "boolean",
+   "default": true
+}
+  },
+  "config": {}
+}

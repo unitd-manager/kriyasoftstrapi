@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_acf_sections_qubi_outcomes_section",
+  "info": {
+    "displayName": "Qubi Outcomes Section"
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "main_title": {
+      "type": "text"
+    },
+    "outcome_items": {
+      "type": "component",
+      "component": "acf-shared.qubi-outcomes-section-outcome-items",
+      "repeatable": true
+    }
+  }
+}

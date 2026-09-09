@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_acf_sections_solutions_stats_bands",
+  "info": {
+    "displayName": "Solutions - Stats Band",
+    "icon": "chart-bars"
+  },
+   "Publish": {
+  "type": "boolean",
+  "default": true
+},
+  "attributes": {
+    "stats": {
+      "type": "component",
+      "repeatable": true,
+      "component": "acf-shared.solutions-stats-band-item"
+    }
+  }
+}

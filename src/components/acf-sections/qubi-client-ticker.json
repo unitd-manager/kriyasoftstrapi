@@ -1,0 +1,11 @@
+{
+  "collectionName": "components_acf_sections_qubi_client_tickers",
+  "info": {
+    "displayName": "Qubi Client Ticker"
+  },
+  "attributes": {
+    "items": {
+      "type": "json"
+    }
+  }
+}

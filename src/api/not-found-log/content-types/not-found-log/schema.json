@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "not_found_logs",
+  "info": {
+    "displayName": "Not Found Log",
+    "singularName": "not-found-log",
+    "pluralName": "not-found-logs",
+    "description": "Tracks every URL that hit a 404, with a hit counter, so broken links can be found and redirected."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "hits": {
+      "type": "integer",
+      "default": 1
+    },
+    "lastSeenAt": {
+      "type": "datetime"
+    }
+  }
+}

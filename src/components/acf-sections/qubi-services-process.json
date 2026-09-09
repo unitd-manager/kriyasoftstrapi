@@ -1,0 +1,9 @@
+{
+  "collectionName": "components_acf_sections_qubi_services_processes",
+  "info": { "displayName": "Qubi Services Process" },
+  "attributes": {
+    "eyebrow": { "type": "string" },
+    "title": { "type": "text" },
+    "items": { "type": "json" }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_acf_shared_solutions_problem_items",
+  "info": {
+    "displayName": "Solutions Problem Item"
+  },
+  "attributes": {
+    "title": { "type": "string" },
+    "description": { "type": "text" },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+}
+  }
+}

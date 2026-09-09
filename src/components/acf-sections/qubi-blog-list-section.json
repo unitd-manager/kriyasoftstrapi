@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_acf_sections_qubi_blog_list_sections",
+  "info": {
+    "displayName": "Qubi Blog List Section",
+    "description": "Renders the blog articles from the Blog collection: optional featured article plus the latest-articles grid. The articles themselves are managed in Content Manager > Blog, not here."
+  },
+  "attributes": {
+    "main_title": {
+      "type": "string"
+    },
+    "show_featured": {
+      "type": "boolean",
+      "default": true
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "max_posts": {
+      "type": "integer",
+      "default": 50
+    }
+  }
+}

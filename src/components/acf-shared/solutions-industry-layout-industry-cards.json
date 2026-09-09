@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_acf_shared_solutions_industry_layout_cards",
+  "info": {
+    "displayName": "Solutions Industry Card"
+  },
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "highlights": {
+      "type": "component",
+      "component": "acf-shared.solutions-industry-layout-highlight-item",
+      "repeatable": true
+    }
+  }
+}

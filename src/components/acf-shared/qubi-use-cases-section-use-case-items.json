@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_acf_shared_qubi_use_case_items",
+  "info": {
+    "displayName": "Qubi Use Cases Section Use Case Items"
+  },
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

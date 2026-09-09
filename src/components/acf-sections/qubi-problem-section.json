@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_acf_sections_qubi_problem_section",
+  "info": {
+    "displayName": "Qubi Problem Section"
+  },
+  "attributes": {
+    "main_title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "richtext"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "problem_items": {
+      "type": "component",
+      "component": "acf-shared.qubi-problem-section-problem-items",
+      "repeatable": true
+    }
+  }
+}

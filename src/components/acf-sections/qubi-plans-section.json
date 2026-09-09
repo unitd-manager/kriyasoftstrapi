@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_acf_sections_qubi_plans_sections",
+  "info": {
+    "displayName": "Qubi Plans Section",
+    "description": "Pricing plan cards with feature lists and a highlight option"
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "main_title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "cta_url": {
+      "type": "string"
+    },
+    "plans": {
+      "type": "component",
+      "component": "acf-shared.qubi-plan-item",
+      "repeatable": true
+    }
+  }
+}

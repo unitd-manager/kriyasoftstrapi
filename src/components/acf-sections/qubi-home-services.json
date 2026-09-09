@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_acf_sections_qubi_home_services",
+  "info": {
+    "displayName": "Qubi Home Services"
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title_line1": {
+      "type": "string"
+    },
+    "title_highlight": {
+      "type": "string"
+    },
+    "items": {
+      "type": "json"
+    }
+  }
+}

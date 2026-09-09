@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_acf_sections_solutions_what_we_do",
+  "info": {
+    "displayName": "Solutions - What We Do",
+    "icon": "brain"
+  },
+  "attributes": {
+    "eyebrowLabel": { "type": "string" },
+    "heading": { "type": "string" },
+    "highlightedHeading": { "type": "string" },
+    "description": { "type": "text" },
+    "tagline": { "type": "string" },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "verbs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "acf-shared.solutions-what-we-do-verb"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "acf-shared.solutions-what-we-do-card"
+    }
+  }
+}

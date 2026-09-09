@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_acf_shared_solutions_stats_band_items",
+  "info": {
+    "displayName": "Solutions Stat Item"
+  },
+  "attributes": {
+    "value": { "type": "string" },
+    "label": { "type": "string" },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+  }
+}

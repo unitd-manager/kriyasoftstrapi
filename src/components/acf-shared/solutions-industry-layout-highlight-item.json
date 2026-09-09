@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_acf_shared_solutions_industry_layout_highlight_items",
+  "info": {
+    "displayName": "Solutions Industry Highlight Item"
+  },
+  "attributes": {
+    "text": { "type": "string" },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+}
+  }
+}

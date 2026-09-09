@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_acf_sections_demo_sections_contact_ctas",
+  "info": {
+    "displayName": "demo-sections.contact-cta"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "highlighted_word": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "form_fields": {
+      "type": "component",
+      "component": "acf-shared.form-fields",
+      "repeatable": true
+    },
+    "cta_label": {
+      "type": "string"
+    },
+    "cta_link": {
+      "type": "string"
+    },
+    "sub_description": {
+      "type": "string"
+    },
+    "request_content": {
+      "type": "string"
+    },
+    "request_description": {
+      "type": "blocks"
+    },
+     "Publish": {
+   "type": "boolean",
+   "default": true
+}
+  },
+  "config": {}
+}

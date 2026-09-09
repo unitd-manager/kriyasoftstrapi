@@ -1,0 +1,58 @@
+{
+  "collectionName": "components_acf_sections_qubi_home_hero",
+  "info": {
+    "displayName": "Qubi Home Hero"
+  },
+  "attributes": {
+    "badge_text": {
+      "type": "string"
+    },
+    "main_title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "button": {
+      "type": "component",
+      "component": "shared.menu-item",
+      "repeatable": false
+    },
+    "hero_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+    ,
+    "image_url": {
+      "type": "string"
+    },
+    "experience_years": {
+      "type": "string"
+    },
+    "experience_suffix": {
+      "type": "string"
+    },
+    "experience_description": {
+      "type": "text"
+    },
+    "snapshot_label": {
+      "type": "string"
+    },
+    "snapshot_items": {
+      "type": "json"
+    },
+    "snapshot_footer": {
+      "type": "string"
+    },
+    "badge": {
+      "type": "string"
+    }
+  }
+}
