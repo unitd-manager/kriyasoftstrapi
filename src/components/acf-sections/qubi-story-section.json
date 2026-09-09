@@ -11,10 +11,24 @@
     "main_title": {
       "type": "text"
     },
-     "Publish": {
-  "type": "boolean",
-  "default": true
-},
+    "title_line1": {
+      "type": "string"
+    },
+    "title_highlight": {
+      "type": "string"
+    },
+    "title_line2": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "button_label": {
+      "type": "string"
+    },
+    "button_url": {
+      "type": "string"
+    },
     "paragraphs": {
       "type": "component",
       "component": "acf-shared.qubi-text-paragraph",
@@ -24,6 +38,10 @@
       "type": "component",
       "component": "acf-shared.qubi-stat-item",
       "repeatable": true
+    },
+    "Publish": {
+      "type": "boolean",
+      "default": true
     }
   }
 }

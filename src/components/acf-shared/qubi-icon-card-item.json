@@ -10,12 +10,23 @@
     "title": {
       "type": "string"
     },
-     "Publish": {
-  "type": "boolean",
-  "default": true
-},
     "description": {
       "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "Publish": {
+      "type": "boolean",
+      "default": true
     }
   }
 }
