@@ -587,6 +587,9 @@ export interface AcfSectionsQubiStorySection extends Struct.ComponentSchema {
     displayName: 'Qubi Story Section';
   };
   attributes: {
+    button_label: Schema.Attribute.String;
+    button_url: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
     eyebrow: Schema.Attribute.String;
     main_title: Schema.Attribute.Text;
     paragraphs: Schema.Attribute.Component<
@@ -595,6 +598,9 @@ export interface AcfSectionsQubiStorySection extends Struct.ComponentSchema {
     >;
     Publish: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     stats: Schema.Attribute.Component<'acf-shared.qubi-stat-item', true>;
+    title_highlight: Schema.Attribute.String;
+    title_line1: Schema.Attribute.String;
+    title_line2: Schema.Attribute.String;
   };
 }
 
@@ -1046,6 +1052,8 @@ export interface AcfSharedQubiIconCardItem extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Text;
     icon: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'>;
+    image_url: Schema.Attribute.String;
     Publish: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     title: Schema.Attribute.String;
   };
@@ -1115,6 +1123,11 @@ export interface AcfSharedQubiStatItem extends Struct.ComponentSchema {
   info: {
     displayName: 'Qubi Stat Item';
   };
+  pluginOptions: {
+    'content-manager': {
+      mainField: 'label';
+    };
+  };
   attributes: {
     label: Schema.Attribute.String;
     Publish: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
@@ -1129,7 +1142,7 @@ export interface AcfSharedQubiTextParagraph extends Struct.ComponentSchema {
   };
   pluginOptions: {
     'content-manager': {
-      mainField: 'label';
+      mainField: 'text';
     };
   };
   attributes: {
