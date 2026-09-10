@@ -582,6 +582,10 @@ export interface ApiEnquiryEnquiry extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     creation_date: Schema.Attribute.DateTime;
     email: Schema.Attribute.Email & Schema.Attribute.Required;
+    enquiry_status: Schema.Attribute.Enumeration<
+      ['new', 'in_progress', 'closed']
+    > &
+      Schema.Attribute.DefaultTo<'new'>;
     enquiry_type: Schema.Attribute.String;
     fax: Schema.Attribute.String;
     first_name: Schema.Attribute.String;
@@ -605,8 +609,6 @@ export interface ApiEnquiryEnquiry extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     service: Schema.Attribute.String;
     staff_id: Schema.Attribute.Integer;
-    status: Schema.Attribute.Enumeration<['new', 'in_progress', 'closed']> &
-      Schema.Attribute.DefaultTo<'new'>;
     subject: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -617,7 +619,7 @@ export interface ApiEnquiryEnquiry extends Struct.CollectionTypeSchema {
 export interface ApiFooterFooter extends Struct.SingleTypeSchema {
   collectionName: 'footers';
   info: {
-    description: 'The whole site footer in one place: company name and its links.';
+    description: 'Global website footer content including logo, navigation links and copyright.';
     displayName: 'Footer';
     pluralName: 'footers';
     singularName: 'footer';
@@ -626,18 +628,19 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    columns: Schema.Attribute.Component<'shared.footer-column', true>;
     copyright_text: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    links: Schema.Attribute.Component<'shared.menu-item', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::footer.footer'
     > &
       Schema.Attribute.Private;
-    publish: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    logo: Schema.Attribute.Media<'images'>;
+    logo_alt: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -780,6 +783,10 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'acf-sections.faq-hero',
         'acf-sections.faq-list',
         'acf-sections.faq-cta',
+        'acf-sections.contact-page-section',
+        'acf-sections.legal-page-hero',
+        'acf-sections.legal-page-body',
+        'acf-sections.legal-page-cta',
         'acf-sections.qubi-differentiators-section',
       ]
     >;

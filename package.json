@@ -31,6 +31,7 @@
     "@koa/router": "^15.6.0",
     "@strapi/plugin-cloud": "^5.52.3",
     "@strapi/plugin-users-permissions": "^5.52.3",
+    "@strapi/provider-email-nodemailer": "^5.52.3",
     "@strapi/strapi": "^5.52.3",
     "axios": "^1.18.0",
     "esbuild": "^0.28.2",

@@ -1,5 +1,24 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface AcfSectionsContactPageSection extends Struct.ComponentSchema {
+  collectionName: 'components_acf_sections_contact_page_sections';
+  info: {
+    displayName: 'Contact Page Section';
+    icon: 'envelope';
+  };
+  attributes: {
+    email: Schema.Attribute.Email & Schema.Attribute.Required;
+    eyebrow: Schema.Attribute.String;
+    form_title: Schema.Attribute.String;
+    heading: Schema.Attribute.String;
+    heading_highlight: Schema.Attribute.String;
+    map_embed_url: Schema.Attribute.String;
+    map_open_url: Schema.Attribute.String;
+    office_address: Schema.Attribute.Text;
+    office_label: Schema.Attribute.String;
+  };
+}
+
 export interface AcfSectionsDemoSectionsCapabilityCard
   extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_demo_sections_capability_cards';
@@ -146,6 +165,47 @@ export interface AcfSectionsHero extends Struct.ComponentSchema {
   };
   attributes: {
     title: Schema.Attribute.RichText;
+  };
+}
+
+export interface AcfSectionsLegalPageBody extends Struct.ComponentSchema {
+  collectionName: 'components_acf_sections_legal_page_bodies';
+  info: {
+    displayName: 'Legal Page Body';
+    icon: 'list';
+  };
+  attributes: {
+    sections: Schema.Attribute.Component<'acf-shared.legal-section-item', true>;
+  };
+}
+
+export interface AcfSectionsLegalPageCta extends Struct.ComponentSchema {
+  collectionName: 'components_acf_sections_legal_page_ctas';
+  info: {
+    displayName: 'Legal Page CTA';
+    icon: 'arrow-right';
+  };
+  attributes: {
+    after_link_text: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    link_text: Schema.Attribute.String;
+    link_url: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface AcfSectionsLegalPageHero extends Struct.ComponentSchema {
+  collectionName: 'components_acf_sections_legal_page_heroes';
+  info: {
+    displayName: 'Legal Page Hero';
+    icon: 'file-alt';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    effective_date: Schema.Attribute.String;
+    eyebrow: Schema.Attribute.String;
+    heading: Schema.Attribute.String;
+    heading_highlight: Schema.Attribute.String;
   };
 }
 
@@ -909,6 +969,18 @@ export interface AcfSharedFormFields extends Struct.ComponentSchema {
   };
 }
 
+export interface AcfSharedLegalSectionItem extends Struct.ComponentSchema {
+  collectionName: 'components_acf_shared_legal_section_items';
+  info: {
+    displayName: 'Legal Section Item';
+    icon: 'align-left';
+  };
+  attributes: {
+    body: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface AcfSharedQubiAnalyticsSectionFeatures
   extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_analytics_features';
@@ -1504,6 +1576,18 @@ export interface SectionsTestimonialSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedFooterColumn extends Struct.ComponentSchema {
+  collectionName: 'components_shared_footer_columns';
+  info: {
+    displayName: 'Footer Column';
+    icon: 'list';
+  };
+  attributes: {
+    links: Schema.Attribute.Component<'shared.menu-item', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedMenuItem extends Struct.ComponentSchema {
   collectionName: 'components_shared_menu_items';
   info: {
@@ -1556,6 +1640,7 @@ export interface SharedSeo extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export namespace Public {
     export interface ComponentSchemas {
+      'acf-sections.contact-page-section': AcfSectionsContactPageSection;
       'acf-sections.demo-sections-capability-card': AcfSectionsDemoSectionsCapabilityCard;
       'acf-sections.demo-sections-contact-cta': AcfSectionsDemoSectionsContactCta;
       'acf-sections.demo-sections-hero': AcfSectionsDemoSectionsHero;
@@ -1567,6 +1652,9 @@ declare module '@strapi/strapi' {
       'acf-sections.faq-list': AcfSectionsFaqList;
       'acf-sections.footer': AcfSectionsFooter;
       'acf-sections.hero': AcfSectionsHero;
+      'acf-sections.legal-page-body': AcfSectionsLegalPageBody;
+      'acf-sections.legal-page-cta': AcfSectionsLegalPageCta;
+      'acf-sections.legal-page-hero': AcfSectionsLegalPageHero;
       'acf-sections.qubi-analytics-section': AcfSectionsQubiAnalyticsSection;
       'acf-sections.qubi-blog-list-section': AcfSectionsQubiBlogListSection;
       'acf-sections.qubi-callout-section': AcfSectionsQubiCalloutSection;
@@ -1613,6 +1701,7 @@ declare module '@strapi/strapi' {
       'acf-shared.bullet-points': AcfSharedBulletPoints;
       'acf-shared.card': AcfSharedCard;
       'acf-shared.form-fields': AcfSharedFormFields;
+      'acf-shared.legal-section-item': AcfSharedLegalSectionItem;
       'acf-shared.qubi-analytics-section-features': AcfSharedQubiAnalyticsSectionFeatures;
       'acf-shared.qubi-capabilities-section-capability-items': AcfSharedQubiCapabilitiesSectionCapabilityItems;
       'acf-shared.qubi-case-metric': AcfSharedQubiCaseMetric;
@@ -1655,6 +1744,7 @@ declare module '@strapi/strapi' {
       'sections.gallery': SectionsGallery;
       'sections.hero': SectionsHero;
       'sections.testimonial-section': SectionsTestimonialSection;
+      'shared.footer-column': SharedFooterColumn;
       'shared.menu-item': SharedMenuItem;
       'shared.nav-parent': SharedNavParent;
       'shared.seo': SharedSeo;

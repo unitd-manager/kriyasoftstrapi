@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_acf_sections_contact_page_sections",
+  "info": {
+    "displayName": "Contact Page Section",
+    "icon": "envelope"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "heading_highlight": {
+      "type": "string"
+    },
+    "form_title": {
+      "type": "string"
+    },
+    "office_label": {
+      "type": "string"
+    },
+    "office_address": {
+      "type": "text"
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "map_embed_url": {
+      "type": "string"
+    },
+    "map_open_url": {
+      "type": "string"
+    }
+  }
+}

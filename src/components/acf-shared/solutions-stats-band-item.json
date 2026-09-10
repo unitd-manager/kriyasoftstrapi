@@ -6,9 +6,9 @@
   "attributes": {
     "value": { "type": "string" },
     "label": { "type": "string" },
-     "Publish": {
-  "type": "boolean",
-  "default": true
-},
+    "Publish": {
+      "type": "boolean",
+      "default": true
+    }
   }
 }
