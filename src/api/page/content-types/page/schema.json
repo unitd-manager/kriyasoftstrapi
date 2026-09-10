@@ -104,6 +104,10 @@
         "acf-sections.faq-hero",
         "acf-sections.faq-list",
         "acf-sections.faq-cta",
+        "acf-sections.contact-page-section",
+        "acf-sections.legal-page-hero",
+        "acf-sections.legal-page-body",
+        "acf-sections.legal-page-cta",
         "acf-sections.qubi-differentiators-section"
       ]
     }

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_acf_sections_legal_page_heroes",
+  "info": {
+    "displayName": "Legal Page Hero",
+    "icon": "file-alt"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "heading_highlight": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "effective_date": {
+      "type": "string"
+    }
+  }
+}
