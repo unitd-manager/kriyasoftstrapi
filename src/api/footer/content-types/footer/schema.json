@@ -5,23 +5,30 @@
     "displayName": "Footer",
     "singularName": "footer",
     "pluralName": "footers",
-    "description": "The whole site footer in one place: company name and its links."
+    "description": "Global website footer content including logo, navigation links and copyright."
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "copyright_text": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "logo_alt": {
       "type": "string"
     },
-    "publish": {
-      "type": "boolean",
-      "default": true
-    },
-    "links": {
+    "columns": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.menu-item"
+      "component": "shared.footer-column"
+    },
+    "copyright_text": {
+      "type": "string"
     }
   }
 }
