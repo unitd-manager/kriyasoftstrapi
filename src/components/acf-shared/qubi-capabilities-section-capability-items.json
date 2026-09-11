@@ -10,12 +10,19 @@
     "title": {
       "type": "text"
     },
-     "Publish": {
-  "type": "boolean",
-  "default": true
-},
+    "short": {
+      "type": "text"
+    },
     "description": {
       "type": "richtext"
+    },
+    "technologies": {
+      "type": "string",
+      "repeatable": true
+    },
+    "Publish": {
+      "type": "boolean",
+      "default": true
     }
   }
 }

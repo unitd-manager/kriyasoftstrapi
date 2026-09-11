@@ -27,8 +27,8 @@ const config: Core.Config.Middlewares = [
           );
 
         const allowedProdOrigins = [
-                 'https://myqubi.com',
-        'https://www.myqubi.com',
+                 'https://kriyasoft.io',
+        'https://www.kriyasoft.io',
 
         ];
 
