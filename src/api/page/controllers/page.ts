@@ -1,7 +1,9 @@
 import { factories } from '@strapi/strapi';
+
 import { buildDynamicZonePopulate } from '../../../utils/deep-populate';
 
 const PAGE_BUILDER_COMPONENTS = [
+  // QUBI
   'acf-sections.qubi-services-hero',
   'acf-sections.qubi-services-list',
   'acf-sections.qubi-services-capabilities',
@@ -23,10 +25,6 @@ const PAGE_BUILDER_COMPONENTS = [
   'acf-sections.qubi-simple-hero',
   'acf-sections.qubi-stats-section',
   'acf-sections.qubi-case-studies-section',
-
-  // QUBI Differentiators
-  'acf-sections.qubi-differentiators-section',
-
   'acf-sections.qubi-story-section',
   'acf-sections.qubi-callout-section',
   'acf-sections.qubi-plans-section',
@@ -36,6 +34,9 @@ const PAGE_BUILDER_COMPONENTS = [
   'acf-sections.qubi-faq-section',
   'acf-sections.qubi-blog-list-section',
   'acf-sections.qubi-subscribe-cta-section',
+
+  // QUBI Differentiators
+  'acf-sections.qubi-differentiators-section',
 
   // Solutions
   'acf-sections.solutions-hero-banner',
@@ -58,6 +59,14 @@ const PAGE_BUILDER_COMPONENTS = [
   'acf-sections.faq-hero',
   'acf-sections.faq-list',
   'acf-sections.faq-cta',
+
+  // Contact
+  'acf-sections.contact-page-section',
+
+  // Legal
+  'acf-sections.legal-page-hero',
+  'acf-sections.legal-page-body',
+  'acf-sections.legal-page-cta',
 ];
 
 export default factories.createCoreController(
@@ -66,15 +75,26 @@ export default factories.createCoreController(
     async findBySlug(ctx) {
       const { slug } = ctx.params;
 
+      if (!slug) {
+        return ctx.badRequest(
+          'Page slug is required.'
+        );
+      }
+
       const entries = await strapi
         .documents('api::page.page')
         .findMany({
-          filters: { slug },
+          filters: {
+            slug,
+          },
+
           status: 'published',
 
           populate: {
             pageBuilder: {
-              on: buildDynamicZonePopulate(PAGE_BUILDER_COMPONENTS),
+              on: buildDynamicZonePopulate(
+                PAGE_BUILDER_COMPONENTS
+              ),
             },
 
             seo: {
@@ -86,8 +106,13 @@ export default factories.createCoreController(
           },
         });
 
-      if (!entries || entries.length === 0) {
-        return ctx.notFound();
+      if (
+        !entries ||
+        entries.length === 0
+      ) {
+        return ctx.notFound(
+          `Page "${slug}" was not found.`
+        );
       }
 
       ctx.body = {

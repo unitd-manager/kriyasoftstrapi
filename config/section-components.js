@@ -56,7 +56,24 @@ const FAQ_COMPONENTS = [
   "acf-sections.faq-cta",
 ];
 
-const GLOBAL_LAYOUT_COMPONENTS = [];
+/*
+ * These components are used by pages such as:
+ *
+ * /contact
+ * /privacy-policy
+ * /terms-of-service
+ * /cookie-policy
+ *
+ * They MUST be included here because
+ * generate-page-schema.js uses this array to
+ * regenerate page/schema.json.
+ */
+const GLOBAL_LAYOUT_COMPONENTS = [
+  "acf-sections.contact-page-section",
+  "acf-sections.legal-page-hero",
+  "acf-sections.legal-page-body",
+  "acf-sections.legal-page-cta",
+];
 
 const PAGE_BUILDER_COMPONENTS = [
   ...QUBI_COMPONENTS,
