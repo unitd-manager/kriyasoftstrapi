@@ -10,10 +10,19 @@
     "main_title": {
       "type": "text"
     },
-     "Publish": {
-  "type": "boolean",
-  "default": true
-},
+    "detail_label": {
+      "type": "string"
+    },
+    "technologies_label": {
+      "type": "string"
+    },
+    "footer": {
+      "type": "string"
+    },
+    "Publish": {
+      "type": "boolean",
+      "default": true
+    },
     "capability_items": {
       "type": "component",
       "component": "acf-shared.qubi-capabilities-section-capability-items",

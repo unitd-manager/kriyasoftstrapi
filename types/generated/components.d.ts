@@ -205,9 +205,12 @@ export interface AcfSectionsQubiCapabilitiesSection
       'acf-shared.qubi-capabilities-section-capability-items',
       true
     >;
+    detail_label: Schema.Attribute.String;
     eyebrow: Schema.Attribute.String;
+    footer: Schema.Attribute.String;
     main_title: Schema.Attribute.Text;
     Publish: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    technologies_label: Schema.Attribute.String;
   };
 }
 
@@ -354,6 +357,8 @@ export interface AcfSectionsQubiHomeHero extends Struct.ComponentSchema {
     snapshot_footer: Schema.Attribute.String;
     snapshot_items: Schema.Attribute.JSON;
     snapshot_label: Schema.Attribute.String;
+    title_highlight: Schema.Attribute.String;
+    title_line2: Schema.Attribute.String;
   };
 }
 
@@ -933,6 +938,8 @@ export interface AcfSharedQubiCapabilitiesSectionCapabilityItems
     description: Schema.Attribute.RichText;
     icon: Schema.Attribute.String;
     Publish: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    short: Schema.Attribute.Text;
+    technologies: Schema.Attribute.String;
     title: Schema.Attribute.Text;
   };
 }

@@ -14,9 +14,9 @@
       "type": "richtext"
     },
     "Publish": {
-  "type": "boolean",
-  "default": true
-},
+      "type": "boolean",
+      "default": true
+    },
     "button": {
       "type": "component",
       "component": "shared.menu-item",
@@ -28,8 +28,7 @@
       "allowedTypes": [
         "images"
       ]
-    }
-    ,
+    },
     "image_url": {
       "type": "string"
     },
@@ -52,6 +51,12 @@
       "type": "string"
     },
     "badge": {
+      "type": "string"
+    },
+    "title_highlight": {
+      "type": "string"
+    },
+    "title_line2": {
       "type": "string"
     }
   }
