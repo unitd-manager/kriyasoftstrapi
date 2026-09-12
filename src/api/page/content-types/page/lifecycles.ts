@@ -297,7 +297,10 @@ export default {
       normalizePageTypeForUpdate(event.params.data);
       normalizeDynamicZones(event.params.data);
       applySeoScore(event.params.data); // ★ ADDED
-      await optimizeUnchangedPageBuilderUpdate(event.params.data);
+      // ★ DISABLED — optimizeUnchangedPageBuilderUpdate was incorrectly
+      // deleting entry.pageBuilder on save for newly-added content,
+      // causing Contact/legal page blocks to vanish after Save.
+      // await optimizeUnchangedPageBuilderUpdate(event.params.data);
     }
   },
 
