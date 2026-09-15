@@ -15,9 +15,6 @@
     "Publish": {
       "type": "boolean",
       "default": true
-    },
-    "label": {
-      "type": "string"
     }
   }
 }

@@ -7,6 +7,10 @@
     "description": { "type": "richtext" },
     "button_label": { "type": "string" },
     "button_url": { "type": "string" },
-    "highlights": { "type": "json" }
+    "highlights": {
+      "type": "component",
+      "repeatable": true,
+      "component": "acf-shared.qubi-services-hero-highlight"
+    }
   }
 }

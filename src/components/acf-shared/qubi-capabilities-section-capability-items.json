@@ -16,13 +16,14 @@
     "description": {
       "type": "richtext"
     },
-    "technologies": {
-      "type": "string",
-      "repeatable": true
-    },
     "Publish": {
       "type": "boolean",
       "default": true
+    },
+    "ServiceTechnologies": {
+      "type": "component",
+      "component": "acf-sections.service-item",
+      "repeatable": true
     }
   }
 }

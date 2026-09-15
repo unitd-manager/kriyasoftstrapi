@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_acf_shared_qubi_home_hero_snapshot_items",
+  "info": {
+    "displayName": "Qubi Home Hero Snapshot Item"
+  },
+  "attributes": {
+    "label": { "type": "string" },
+    "icon": { "type": "string" },
+      "status": { "type": "string" },
+        "color": { "type": "string" },
+    "Publish": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

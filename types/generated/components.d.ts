@@ -289,6 +289,7 @@ export interface AcfSectionsQubiCaseStudiesSection
     eyebrow: Schema.Attribute.String;
     main_title: Schema.Attribute.Text;
     Publish: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    title_highlight: Schema.Attribute.String;
   };
 }
 
@@ -298,7 +299,10 @@ export interface AcfSectionsQubiClientTicker extends Struct.ComponentSchema {
     displayName: 'Qubi Client Ticker';
   };
   attributes: {
-    items: Schema.Attribute.JSON;
+    items: Schema.Attribute.Component<
+      'acf-shared.qubi-client-ticker-item',
+      true
+    >;
   };
 }
 
@@ -391,9 +395,11 @@ export interface AcfSectionsQubiFinalCtaSection extends Struct.ComponentSchema {
   attributes: {
     button: Schema.Attribute.Component<'shared.menu-item', false>;
     description: Schema.Attribute.RichText;
+    eyebrow: Schema.Attribute.Text;
     main_title: Schema.Attribute.Text;
     Publish: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     secondary_button: Schema.Attribute.Component<'shared.menu-item', false>;
+    title_highlight: Schema.Attribute.String;
   };
 }
 
@@ -415,7 +421,10 @@ export interface AcfSectionsQubiHomeHero extends Struct.ComponentSchema {
     main_title: Schema.Attribute.Text;
     Publish: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     snapshot_footer: Schema.Attribute.String;
-    snapshot_items: Schema.Attribute.JSON;
+    snapshot_items: Schema.Attribute.Component<
+      'acf-shared.qubi-home-hero-snapshot-item',
+      true
+    >;
     snapshot_label: Schema.Attribute.String;
     title_highlight: Schema.Attribute.String;
     title_line2: Schema.Attribute.String;
@@ -429,7 +438,10 @@ export interface AcfSectionsQubiHomeServices extends Struct.ComponentSchema {
   };
   attributes: {
     eyebrow: Schema.Attribute.String;
-    items: Schema.Attribute.JSON;
+    items: Schema.Attribute.Component<
+      'acf-shared.qubi-home-services-item',
+      true
+    >;
     title_highlight: Schema.Attribute.String;
     title_line1: Schema.Attribute.String;
   };
@@ -449,6 +461,7 @@ export interface AcfSectionsQubiHowItWorksSection
       'acf-shared.qubi-how-it-works-section-steps',
       true
     >;
+    title_highlight: Schema.Attribute.String;
   };
 }
 
@@ -560,7 +573,10 @@ export interface AcfSectionsQubiServicesCapabilities
   };
   attributes: {
     eyebrow: Schema.Attribute.String;
-    items: Schema.Attribute.JSON;
+    items: Schema.Attribute.Component<
+      'acf-shared.qubi-services-capabilities-item',
+      true
+    >;
     title: Schema.Attribute.Text;
   };
 }
@@ -590,7 +606,10 @@ export interface AcfSectionsQubiServicesHero extends Struct.ComponentSchema {
     button_url: Schema.Attribute.String;
     description: Schema.Attribute.RichText;
     eyebrow: Schema.Attribute.String;
-    highlights: Schema.Attribute.JSON;
+    highlights: Schema.Attribute.Component<
+      'acf-shared.qubi-services-hero-highlight',
+      true
+    >;
     title: Schema.Attribute.Text;
   };
 }
@@ -603,8 +622,12 @@ export interface AcfSectionsQubiServicesList extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.RichText;
     eyebrow: Schema.Attribute.String;
-    items: Schema.Attribute.JSON;
+    items: Schema.Attribute.Component<
+      'acf-shared.qubi-services-list-item',
+      true
+    >;
     title: Schema.Attribute.Text;
+    title_highlight: Schema.Attribute.String;
   };
 }
 
@@ -615,7 +638,10 @@ export interface AcfSectionsQubiServicesProcess extends Struct.ComponentSchema {
   };
   attributes: {
     eyebrow: Schema.Attribute.String;
-    items: Schema.Attribute.JSON;
+    items: Schema.Attribute.Component<
+      'acf-shared.qubi-services-process-item',
+      true
+    >;
     title: Schema.Attribute.Text;
   };
 }
@@ -740,6 +766,18 @@ export interface AcfSectionsSectionSpacePadding extends Struct.ComponentSchema {
       'acf-shared.section-space-padding-position',
       false
     >;
+  };
+}
+
+export interface AcfSectionsServiceItem extends Struct.ComponentSchema {
+  collectionName: 'components_acf_sections_service_items';
+  info: {
+    displayName: 'service item';
+    icon: 'alien';
+  };
+  attributes: {
+    Publish: Schema.Attribute.Boolean;
+    Tags: Schema.Attribute.String;
   };
 }
 
@@ -1010,8 +1048,11 @@ export interface AcfSharedQubiCapabilitiesSectionCapabilityItems
     description: Schema.Attribute.RichText;
     icon: Schema.Attribute.String;
     Publish: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    ServiceTechnologies: Schema.Attribute.Component<
+      'acf-sections.service-item',
+      true
+    >;
     short: Schema.Attribute.Text;
-    technologies: Schema.Attribute.String;
     title: Schema.Attribute.Text;
   };
 }
@@ -1052,6 +1093,18 @@ export interface AcfSharedQubiCaseStudy extends Struct.ComponentSchema {
   };
 }
 
+export interface AcfSharedQubiClientTickerItem extends Struct.ComponentSchema {
+  collectionName: 'components_acf_shared_qubi_client_ticker_items';
+  info: {
+    displayName: 'Qubi Client Ticker Item';
+  };
+  attributes: {
+    logo: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    Publish: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+  };
+}
+
 export interface AcfSharedQubiComparisonRow extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_comparison_rows';
   info: {
@@ -1088,6 +1141,37 @@ export interface AcfSharedQubiFaqItem extends Struct.ComponentSchema {
     answer: Schema.Attribute.Text;
     Publish: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     question: Schema.Attribute.String;
+  };
+}
+
+export interface AcfSharedQubiHomeHeroSnapshotItem
+  extends Struct.ComponentSchema {
+  collectionName: 'components_acf_shared_qubi_home_hero_snapshot_items';
+  info: {
+    displayName: 'Qubi Home Hero Snapshot Item';
+  };
+  attributes: {
+    color: Schema.Attribute.String;
+    icon: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    Publish: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    status: Schema.Attribute.String;
+  };
+}
+
+export interface AcfSharedQubiHomeServicesItem extends Struct.ComponentSchema {
+  collectionName: 'components_acf_shared_qubi_home_services_items';
+  info: {
+    displayName: 'Qubi Home Services Item';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.String;
+    Publish: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    Service: Schema.Attribute.Component<'acf-sections.service-item', true>;
+    stat: Schema.Attribute.Component<'acf-shared.qubi-stat-item', true>;
+    title: Schema.Attribute.String;
+    url: Schema.Attribute.String;
   };
 }
 
@@ -1197,6 +1281,65 @@ export interface AcfSharedQubiProblemSectionProblemItems
   };
 }
 
+export interface AcfSharedQubiServicesCapabilitiesItem
+  extends Struct.ComponentSchema {
+  collectionName: 'components_acf_shared_qubi_services_capabilities_items';
+  info: {
+    displayName: 'Qubi Services Capabilities Item';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'>;
+    Publish: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    title: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
+export interface AcfSharedQubiServicesHeroHighlight
+  extends Struct.ComponentSchema {
+  collectionName: 'components_acf_shared_qubi_services_hero_highlights';
+  info: {
+    displayName: 'Qubi Services Hero Highlight';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    label: Schema.Attribute.String;
+    Publish: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface AcfSharedQubiServicesListItem extends Struct.ComponentSchema {
+  collectionName: 'components_acf_shared_qubi_services_list_items';
+  info: {
+    displayName: 'Qubi Services List Item';
+  };
+  attributes: {
+    blurb: Schema.Attribute.String;
+    icon: Schema.Attribute.String;
+    points: Schema.Attribute.Component<'acf-shared.qubi-stat-item', true>;
+    Publish: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    tags: Schema.Attribute.Component<'acf-sections.service-item', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface AcfSharedQubiServicesProcessItem
+  extends Struct.ComponentSchema {
+  collectionName: 'components_acf_shared_qubi_services_process_items';
+  info: {
+    displayName: 'Qubi Services Process Item';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    Publish: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    step: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface AcfSharedQubiStatItem extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_stat_items';
   info: {
@@ -1208,9 +1351,23 @@ export interface AcfSharedQubiStatItem extends Struct.ComponentSchema {
     };
   };
   attributes: {
-    label: Schema.Attribute.String;
     Publish: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     value: Schema.Attribute.String;
+  };
+}
+
+export interface AcfSharedQubiTestimonialItem extends Struct.ComponentSchema {
+  collectionName: 'components_acf_shared_qubi_testimonial_items';
+  info: {
+    displayName: 'Qubi Testimonial Item';
+  };
+  attributes: {
+    company: Schema.Attribute.String;
+    image_url: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    Publish: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    quote: Schema.Attribute.Text;
+    role: Schema.Attribute.String;
   };
 }
 
@@ -1543,7 +1700,7 @@ export interface SectionsFaqSection extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    items: Schema.Attribute.JSON;
+    items: Schema.Attribute.Component<'acf-sections.faq-item', true>;
     title: Schema.Attribute.String;
   };
 }
@@ -1578,7 +1735,10 @@ export interface SectionsTestimonialSection extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    testimonials: Schema.Attribute.JSON;
+    testimonials: Schema.Attribute.Component<
+      'acf-shared.qubi-testimonial-item',
+      true
+    >;
     title: Schema.Attribute.String;
   };
 }
@@ -1636,11 +1796,25 @@ export interface SharedSeo extends Struct.ComponentSchema {
     ogDescription: Schema.Attribute.Text;
     ogImage: Schema.Attribute.Media<'images'>;
     ogTitle: Schema.Attribute.String;
-    schema: Schema.Attribute.JSON;
+    schema: Schema.Attribute.Component<'shared.seo-schema', true>;
     twitterCard: Schema.Attribute.Enumeration<
       ['summary', 'summary_large_image']
     > &
       Schema.Attribute.DefaultTo<'summary_large_image'>;
+  };
+}
+
+export interface SharedSeoSchema extends Struct.ComponentSchema {
+  collectionName: 'components_shared_seo_schemas';
+  info: {
+    displayName: 'SEO Schema';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    name: Schema.Attribute.String;
+    Publish: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    type: Schema.Attribute.String;
+    url: Schema.Attribute.String;
   };
 }
 
@@ -1695,6 +1869,7 @@ declare module '@strapi/strapi' {
       'acf-sections.qubi-use-cases-section': AcfSectionsQubiUseCasesSection;
       'acf-sections.roundtable-sessions-sections': AcfSectionsRoundtableSessionsSections;
       'acf-sections.section-space-padding': AcfSectionsSectionSpacePadding;
+      'acf-sections.service-item': AcfSectionsServiceItem;
       'acf-sections.session-item-sections': AcfSectionsSessionItemSections;
       'acf-sections.solutions-comparison-block': AcfSectionsSolutionsComparisonBlock;
       'acf-sections.solutions-execution-flow': AcfSectionsSolutionsExecutionFlow;
@@ -1713,9 +1888,12 @@ declare module '@strapi/strapi' {
       'acf-shared.qubi-capabilities-section-capability-items': AcfSharedQubiCapabilitiesSectionCapabilityItems;
       'acf-shared.qubi-case-metric': AcfSharedQubiCaseMetric;
       'acf-shared.qubi-case-study': AcfSharedQubiCaseStudy;
+      'acf-shared.qubi-client-ticker-item': AcfSharedQubiClientTickerItem;
       'acf-shared.qubi-comparison-row': AcfSharedQubiComparisonRow;
       'acf-shared.qubi-differentiator-item': AcfSharedQubiDifferentiatorItem;
       'acf-shared.qubi-faq-item': AcfSharedQubiFaqItem;
+      'acf-shared.qubi-home-hero-snapshot-item': AcfSharedQubiHomeHeroSnapshotItem;
+      'acf-shared.qubi-home-services-item': AcfSharedQubiHomeServicesItem;
       'acf-shared.qubi-how-it-works-section-steps': AcfSharedQubiHowItWorksSectionSteps;
       'acf-shared.qubi-human-in-loop-section-badges': AcfSharedQubiHumanInLoopSectionBadges;
       'acf-shared.qubi-icon-card-item': AcfSharedQubiIconCardItem;
@@ -1723,7 +1901,12 @@ declare module '@strapi/strapi' {
       'acf-shared.qubi-outcomes-section-outcome-items': AcfSharedQubiOutcomesSectionOutcomeItems;
       'acf-shared.qubi-plan-item': AcfSharedQubiPlanItem;
       'acf-shared.qubi-problem-section-problem-items': AcfSharedQubiProblemSectionProblemItems;
+      'acf-shared.qubi-services-capabilities-item': AcfSharedQubiServicesCapabilitiesItem;
+      'acf-shared.qubi-services-hero-highlight': AcfSharedQubiServicesHeroHighlight;
+      'acf-shared.qubi-services-list-item': AcfSharedQubiServicesListItem;
+      'acf-shared.qubi-services-process-item': AcfSharedQubiServicesProcessItem;
       'acf-shared.qubi-stat-item': AcfSharedQubiStatItem;
+      'acf-shared.qubi-testimonial-item': AcfSharedQubiTestimonialItem;
       'acf-shared.qubi-text-paragraph': AcfSharedQubiTextParagraph;
       'acf-shared.qubi-use-cases-section-use-case-items': AcfSharedQubiUseCasesSectionUseCaseItems;
       'acf-shared.roundtable-sessions-sections-roundtables': AcfSharedRoundtableSessionsSectionsRoundtables;
@@ -1755,6 +1938,7 @@ declare module '@strapi/strapi' {
       'shared.menu-item': SharedMenuItem;
       'shared.nav-parent': SharedNavParent;
       'shared.seo': SharedSeo;
+      'shared.seo-schema': SharedSeoSchema;
     }
   }
 }

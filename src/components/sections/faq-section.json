@@ -11,7 +11,9 @@
       "type": "text"
     },
     "items": {
-      "type": "json"
+      "type": "component",
+      "repeatable": true,
+      "component": "acf-sections.faq-item"
     }
   }
 }

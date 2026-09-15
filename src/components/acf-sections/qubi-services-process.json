@@ -4,6 +4,10 @@
   "attributes": {
     "eyebrow": { "type": "string" },
     "title": { "type": "text" },
-    "items": { "type": "json" }
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "acf-shared.qubi-services-process-item"
+    }
   }
 }

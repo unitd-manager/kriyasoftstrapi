@@ -45,7 +45,9 @@
       "type": "string"
     },
     "snapshot_items": {
-      "type": "json"
+      "type": "component",
+      "repeatable": true,
+      "component": "acf-shared.qubi-home-hero-snapshot-item"
     },
     "snapshot_footer": {
       "type": "string"

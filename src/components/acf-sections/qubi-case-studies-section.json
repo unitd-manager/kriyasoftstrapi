@@ -8,10 +8,10 @@
     "eyebrow": {
       "type": "string"
     },
-     "Publish": {
-  "type": "boolean",
-  "default": true
-},
+    "Publish": {
+      "type": "boolean",
+      "default": true
+    },
     "main_title": {
       "type": "text"
     },
@@ -19,6 +19,9 @@
       "type": "component",
       "component": "acf-shared.qubi-case-study",
       "repeatable": true
+    },
+    "title_highlight": {
+      "type": "string"
     }
   }
 }

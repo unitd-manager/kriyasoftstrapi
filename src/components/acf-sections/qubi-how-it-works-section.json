@@ -10,14 +10,17 @@
     "main_title": {
       "type": "text"
     },
-     "Publish": {
-  "type": "boolean",
-  "default": true
-},
+    "Publish": {
+      "type": "boolean",
+      "default": true
+    },
     "steps": {
       "type": "component",
       "component": "acf-shared.qubi-how-it-works-section-steps",
       "repeatable": true
+    },
+    "title_highlight": {
+      "type": "string"
     }
   }
 }

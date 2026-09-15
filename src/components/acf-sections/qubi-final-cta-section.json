@@ -4,16 +4,19 @@
     "displayName": "Qubi Final CTA Section"
   },
   "attributes": {
+    "eyebrow": {
+      "type": "text"
+    },
     "main_title": {
       "type": "text"
     },
     "description": {
       "type": "richtext"
     },
-     "Publish": {
-  "type": "boolean",
-  "default": true
-},
+    "Publish": {
+      "type": "boolean",
+      "default": true
+    },
     "button": {
       "type": "component",
       "component": "shared.menu-item",
@@ -23,6 +26,9 @@
       "type": "component",
       "component": "shared.menu-item",
       "repeatable": false
+    },
+    "title_highlight": {
+      "type": "string"
     }
   }
 }

@@ -5,7 +5,9 @@
   },
   "attributes": {
     "items": {
-      "type": "json"
+      "type": "component",
+      "repeatable": true,
+      "component": "acf-shared.qubi-client-ticker-item"
     }
   }
 }

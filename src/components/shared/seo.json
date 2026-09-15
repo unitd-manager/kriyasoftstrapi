@@ -48,7 +48,9 @@
       ]
     },
     "schema": {
-      "type": "json"
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.seo-schema"
     }
   }
 }
