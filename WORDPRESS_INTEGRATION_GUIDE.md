@@ -23,10 +23,6 @@ This guide explains how to fetch and display WordPress posts data from your `qbo
 - GET `/api/posts/wordpress` - List posts with pagination
 - GET `/api/posts/wordpress/:postId` - Get specific post by ID
 
-### 5. **React Admin Component** ([src/admin/components/WordPressPostsTable.tsx](src/admin/components/WordPressPostsTable.tsx))
-- Displays WordPress posts in a formatted table
-- Shows post title, type, status, date, and comment count
-
 ## How to Use
 
 ### Step 1: Add WordPress Post IDs to a Strapi Post
@@ -294,9 +290,6 @@ Fetch posts by specific IDs, maintaining order.
 
 4. [src/api/post/routes/post.ts](src/api/post/routes/post.ts)
    - Created custom routes for WordPress endpoints
-
-5. [src/admin/components/WordPressPostsTable.tsx](src/admin/components/WordPressPostsTable.tsx)
-   - Created React component for displaying WordPress posts in admin
 
 ## Troubleshooting
 

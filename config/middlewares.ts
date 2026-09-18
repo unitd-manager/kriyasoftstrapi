@@ -73,9 +73,6 @@ const config: Core.Config.Middlewares = [
   //   name: 'global::optimize-page-admin-list',
   // },
 
-  {
-    name: 'global::qbo-posts-router',
-  },
 ];
 
 export default config;

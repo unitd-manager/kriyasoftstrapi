@@ -18,7 +18,6 @@ You now have the ability to **fetch and display WordPress posts data from the `q
 | [src/api/post/content-types/post/schema.json](src/api/post/content-types/post/schema.json) | ✅ New post fields: `wpPostIds`, `displayWpData` |
 | [src/api/post/content-types/post/lifecycles.ts](src/api/post/content-types/post/lifecycles.ts) | ✅ Automatic WordPress data enrichment |
 | [src/admin/hooks/useWordPressPosts.ts](src/admin/hooks/useWordPressPosts.ts) | ✅ React hook for frontend |
-| [src/admin/components/WordPressPostsTable.tsx](src/admin/components/WordPressPostsTable.tsx) | ✅ Admin UI component |
 
 ### Documentation Files
 
