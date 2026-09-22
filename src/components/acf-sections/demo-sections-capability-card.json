@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_acf_sections_demo_sections_capability_cards",
+  "info": {
+    "displayName": "demo-sections.capability-card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+     "Publish": {
+   "type": "boolean",
+   "default": true
+},
+    "card": {
+      "type": "component",
+      "component": "acf-shared.card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_acf_shared_qubi_stat_items",
+  "info": {
+    "displayName": "Qubi Stat Item"
+  },
+  "pluginOptions": {
+    "content-manager": {
+      "mainField": "label"
+    }
+  },
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "Publish": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

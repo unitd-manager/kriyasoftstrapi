@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_acf_sections_solutions_hero_banners",
+  "info": {
+    "displayName": "Solutions - Hero Banner",
+    "icon": "picture"
+  },
+  "attributes": {
+    "badgeLabel": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "highlightedHeading": {
+      "type": "string"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "description": {
+      "type": "text"
+    },
+    "buttonLabel": {
+      "type": "string"
+    },
+    "buttonUrl": {
+      "type": "string"
+    }
+  }
+}

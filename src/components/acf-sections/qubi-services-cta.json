@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_acf_sections_qubi_services_ctas",
+  "info": {
+    "displayName": "Qubi Services CTA"
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    },
+    "sub_title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "button_label": {
+      "type": "string"
+    },
+    "button_url": {
+      "type": "string"
+    }
+  }
+}

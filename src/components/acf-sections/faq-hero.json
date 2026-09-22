@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_acf_sections_faq_heroes",
+  "info": {
+    "displayName": "faq-hero"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow_text": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "highlighted_word": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+     "Publish": {
+   "type": "boolean",
+   "default": true
+}
+  },
+  "config": {}
+}

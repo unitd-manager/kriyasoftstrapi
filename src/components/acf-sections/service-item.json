@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_acf_sections_service_items",
+  "info": {
+    "displayName": "service item",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "Tags": {
+      "type": "string"
+    },
+    "Publish": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

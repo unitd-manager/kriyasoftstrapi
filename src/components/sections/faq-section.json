@@ -1,0 +1,19 @@
+﻿{
+  "collectionName": "components_sections_faqs",
+  "info": {
+    "displayName": "FAQ Section"
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "acf-sections.faq-item"
+    }
+  }
+}

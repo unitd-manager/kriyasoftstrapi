@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_acf_sections_qubi_use_cases_section",
+  "info": {
+    "displayName": "Qubi Use Cases Section"
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "main_title": {
+      "type": "text"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "use_case_items": {
+      "type": "component",
+      "component": "acf-shared.qubi-use-cases-section-use-case-items",
+      "repeatable": true
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_acf_sections_solutions_comparison_blocks",
+  "info": {
+    "displayName": "Solutions Comparison Block",
+    "icon": "layout"
+  },
+  "attributes": {
+    "heading": { "type": "string" },
+    "highlightedHeading": { "type": "string" },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "othersLabel": { "type": "string" },
+    "othersItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "acf-shared.solutions-comparison-item"
+    },
+    "qubiLabel": { "type": "string" },
+    "qubiItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "acf-shared.solutions-comparison-item"
+    }
+  }
+}

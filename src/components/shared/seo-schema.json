@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_seo_schemas",
+  "info": {
+    "displayName": "SEO Schema"
+  },
+  "attributes": {
+    "type": { "type": "string" },
+    "name": { "type": "string" },
+    "url": { "type": "string" },
+    "description": { "type": "text" },
+    "Publish": { "type": "boolean", "default": true }
+  }
+}

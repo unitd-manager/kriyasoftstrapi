@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_acf_shared_qubi_testimonial_items",
+  "info": {
+    "displayName": "Qubi Testimonial Item"
+  },
+  "attributes": {
+    "quote": { "type": "text" },
+    "name": { "type": "string" },
+    "role": { "type": "string" },
+    "company": { "type": "string" },
+    "image_url": { "type": "string" },
+    "Publish": { "type": "boolean", "default": true }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_acf_shared_legal_section_items",
+  "info": {
+    "displayName": "Legal Section Item",
+    "icon": "align-left"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

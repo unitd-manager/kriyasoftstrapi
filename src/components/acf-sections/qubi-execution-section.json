@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_acf_sections_qubi_execution_sections",
+  "info": {
+    "displayName": "Qubi Execution Section",
+    "description": "Heading with gradient tail, three icon cards, and a highlighted callout banner"
+  },
+  "attributes": {
+    "main_title": {
+      "type": "text"
+    },
+    "title_highlight": {
+      "type": "string"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "description": {
+      "type": "text"
+    },
+    "items": {
+      "type": "component",
+      "component": "acf-shared.qubi-icon-card-item",
+      "repeatable": true
+    },
+    "callout_title": {
+      "type": "text"
+    },
+    "callout_description": {
+      "type": "text"
+    }
+  }
+}

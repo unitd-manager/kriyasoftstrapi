@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_acf_sections_qubi_callout_sections",
+  "info": {
+    "displayName": "Qubi Callout Section",
+    "description": "Compact banner with icon, heading, and body text"
+  },
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "main_title": {
+      "type": "text"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "description": {
+      "type": "text"
+    }
+  }
+}
