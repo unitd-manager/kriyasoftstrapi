@@ -1,0 +1,15 @@
+.git
+.env
+.env.*
+!.env.example
+node_modules
+dist
+build
+.strapi
+.strapi-cache
+.tmp
+.cache
+coverage
+*.log
+public/uploads/*
+!public/uploads/.gitkeep
