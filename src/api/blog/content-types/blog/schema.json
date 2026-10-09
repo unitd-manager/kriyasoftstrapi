@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blogs",
+  "info": {
+    "displayName": "Blog",
+    "singularName": "blog",
+    "pluralName": "blogs",
+    "description": "Blog articles shown on /resources/blog. Mirrors the production blog schema."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "date": {
+      "type": "date"
+    },
+    "meta_keyword": {
+      "type": "string"
+    },
+    "us_title": {
+      "type": "string"
+    },
+    "Publish": {
+      "type": "boolean",
+      "default": true
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "blog_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::blog-category.blog-category",
+      "inversedBy": "blogs"
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "flag": {
+      "type": "boolean"
+    }
+  }
+}

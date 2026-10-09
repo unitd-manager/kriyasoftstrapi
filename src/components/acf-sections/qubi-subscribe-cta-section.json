@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_acf_sections_qubi_subscribe_cta_sections",
+  "info": {
+    "displayName": "Qubi Subscribe CTA Section",
+    "description": "Centered heading, supporting text, and a single action button on a tinted band"
+  },
+  "attributes": {
+    "main_title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "button": {
+      "type": "component",
+      "component": "shared.menu-item",
+      "repeatable": false
+    }
+  }
+}

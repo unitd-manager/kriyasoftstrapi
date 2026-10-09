@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_acf_sections_qubi_services_capabilities",
+  "info": { "displayName": "Qubi Services Capabilities" },
+  "attributes": {
+    "eyebrow": { "type": "string" },
+    "title": { "type": "text" },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "acf-shared.qubi-services-capabilities-item"
+    }
+  }
+}

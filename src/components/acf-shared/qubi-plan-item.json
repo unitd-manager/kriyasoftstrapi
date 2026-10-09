@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_acf_shared_qubi_plan_items",
+  "info": {
+    "displayName": "Qubi Plan Item"
+  },
+  "attributes": {
+    "tagline": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta_label": {
+      "type": "string"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "acf-shared.qubi-text-paragraph"
+    }
+  }
+}

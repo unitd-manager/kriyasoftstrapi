@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_acf_sections_demo_sections_video_showcases",
+  "info": {
+    "displayName": "demo-sections.video-showcase"
+  },
+  "options": {},
+  "attributes": {
+    "video_title": {
+      "type": "string"
+    },
+    "video_subtitle": {
+      "type": "string"
+    },
+    "video_url": {
+      "type": "string"
+    },
+     "Publish": {
+   "type": "boolean",
+   "default": true
+}
+  },
+  "config": {}
+}

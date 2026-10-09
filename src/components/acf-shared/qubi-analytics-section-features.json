@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_acf_shared_qubi_analytics_features",
+  "info": {
+    "displayName": "Qubi Analytics Section Features"
+  },
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

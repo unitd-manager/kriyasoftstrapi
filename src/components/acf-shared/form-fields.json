@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_acf_shared_form_fields",
+  "info": {
+    "displayName": "form_fields"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "field_type": {
+      "type": "enumeration",
+      "enum": [
+        "text",
+        "email",
+        "tel",
+        "textarea"
+      ]
+    },
+    "is_required": {
+      "type": "boolean"
+    },
+    "field_name": {
+      "type": "string"
+    },
+     "Publish": {
+   "type": "boolean",
+   "default": true
+},
+    "width": {
+      "type": "enumeration",
+      "enum": [
+        "full",
+        "half"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_nav_parents",
+  "info": {
+    "displayName": "nav-parent",
+    "icon": "bulletList"
+  },
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "publish": {
+      "type": "boolean"
+    },
+    "children": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.menu-item"
+    }
+  }
+}

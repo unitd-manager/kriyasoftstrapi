@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_acf_sections_solutions_industry_layout",
+  "info": {
+    "displayName": "Solutions Industry Layout"
+  },
+  "attributes": {
+    "industry_cards": {
+      "type": "component",
+      "component": "acf-shared.solutions-industry-layout-industry-cards",
+      "repeatable": true
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "class_name": {
+      "type": "string"
+    },
+    "acf_id": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_acf_shared_qubi_services_capabilities_items",
+  "info": {
+    "displayName": "Qubi Services Capabilities Item"
+  },
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+     "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "url": {
+      "type": "string"
+    },
+    "Publish": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

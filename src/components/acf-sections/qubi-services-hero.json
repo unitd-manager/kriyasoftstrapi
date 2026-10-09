@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_acf_sections_qubi_services_heroes",
+  "info": { "displayName": "Qubi Services Hero" },
+  "attributes": {
+    "eyebrow": { "type": "string" },
+    "title": { "type": "text" },
+    "description": { "type": "richtext" },
+    "button_label": { "type": "string" },
+    "button_url": { "type": "string" },
+    "highlights": {
+      "type": "component",
+      "repeatable": true,
+      "component": "acf-shared.qubi-services-hero-highlight"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_acf_shared_qubi_differentiator_items",
+  "info": {
+    "displayName": "Qubi Differentiator Item",
+    "description": "Single check-marked card item used inside the differentiators (\"Why enterprise clients choose us\") section"
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "description": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_acf_shared_qubi_hiw_steps",
+  "info": {
+    "displayName": "Qubi How It Works Section Steps"
+  },
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "step_number": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

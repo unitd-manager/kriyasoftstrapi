@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_acf_shared_bullet_points",
+  "info": {
+    "displayName": "bullet_points"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "string"
+    },
+     "Publish": {
+   "type": "boolean",
+   "default": true
+}
+  },
+  "config": {}
+}

@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_acf_sections_qubi_capabilities_section",
+  "info": {
+    "displayName": "Qubi Capabilities Section"
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "main_title": {
+      "type": "text"
+    },
+    "detail_label": {
+      "type": "string"
+    },
+    "technologies_label": {
+      "type": "string"
+    },
+    "footer": {
+      "type": "string"
+    },
+    "Publish": {
+      "type": "boolean",
+      "default": true
+    },
+    "capability_items": {
+      "type": "component",
+      "component": "acf-shared.qubi-capabilities-section-capability-items",
+      "repeatable": true
+    }
+  }
+}

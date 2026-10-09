@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_acf_sections_heroes",
+  "info": {
+    "displayName": "hero"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

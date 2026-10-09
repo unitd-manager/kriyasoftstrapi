@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_acf_sections_solutions_final_cta",
+  "info": {
+    "displayName": "Solutions Final CTA"
+  },
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "buttonLabel": {
+      "type": "string"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "buttonUrl": {
+      "type": "string"
+    }
+  }
+}

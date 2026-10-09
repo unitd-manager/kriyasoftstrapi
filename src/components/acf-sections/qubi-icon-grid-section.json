@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_acf_sections_qubi_icon_grid_sections",
+  "info": {
+    "displayName": "Qubi Icon Grid Section",
+    "description": "Centered grid of icon cards with section heading (e.g. platform components)"
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "main_title": {
+      "type": "text"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "description": {
+      "type": "text"
+    },
+    "items": {
+      "type": "component",
+      "component": "acf-shared.qubi-icon-card-item",
+      "repeatable": true
+    }
+  }
+}

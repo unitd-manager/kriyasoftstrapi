@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_acf_shared_solutions_comparison_items",
+  "info": {
+    "displayName": "Solutions Comparison Item"
+  },
+  "attributes": {
+    "text": { "type": "string" },
+    "Publish": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

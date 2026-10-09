@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_acf_sections_qubi_simple_heroes",
+  "info": {
+    "displayName": "Qubi Simple Hero",
+    "description": "Centered text-only page hero: badge, title, description"
+  },
+  "attributes": {
+    "badge_text": {
+      "type": "string"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "main_title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_acf_shared_qubi_comparison_rows",
+  "info": {
+    "displayName": "Qubi Comparison Row"
+  },
+  "attributes": {
+    "aspect": {
+      "type": "string"
+    },
+    "them": {
+      "type": "string"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "us": {
+      "type": "string"
+    }
+  }
+}

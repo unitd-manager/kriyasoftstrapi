@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_acf_sections_faq_lists",
+  "info": {
+    "displayName": "faq-list"
+  },
+  "options": {},
+  "attributes": {
+    "groups": {
+      "type": "component",
+      "component": "acf-sections.faq-group",
+      "repeatable": true
+    },
+     "Publish": {
+   "type": "boolean",
+   "default": true
+}
+  },
+  "config": {}
+}

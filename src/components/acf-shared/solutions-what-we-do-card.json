@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_acf_shared_solutions_what_we_do_cards",
+  "info": {
+    "displayName": "Solutions What We Do Card"
+  },
+  "attributes": {
+    "icon": { "type": "string" },
+    "title": { "type": "string" },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "description": { "type": "text" }
+  }
+}

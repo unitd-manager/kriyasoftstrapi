@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_acf_shared_qubi_problem_items",
+  "info": {
+    "displayName": "Qubi Problem Section Problem Items"
+  },
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "title": {
+      "type": "text"
+    }
+  }
+}

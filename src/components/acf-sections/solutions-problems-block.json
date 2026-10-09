@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_acf_sections_solutions_problems_blocks",
+  "info": {
+    "displayName": "Solutions Problems Block",
+    "icon": "layout"
+  },
+  "attributes": {
+    "eyebrowLabel": { "type": "string" },
+    "heading": { "type": "string" },
+    "description": { "type": "text" },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "problems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "acf-shared.solutions-problem-item"
+    }
+  }
+}

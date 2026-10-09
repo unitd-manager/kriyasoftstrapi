@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_acf_shared_qubi_services_list_items",
+  "info": {
+    "displayName": "Qubi Services List Item"
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "Publish": {
+      "type": "boolean",
+      "default": true
+    },
+    "blurb": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "component",
+      "component": "acf-sections.service-item",
+      "repeatable": true
+    },
+    "points": {
+      "type": "component",
+      "component": "acf-shared.qubi-stat-item",
+      "repeatable": true
+    }
+  }
+}

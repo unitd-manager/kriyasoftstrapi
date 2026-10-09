@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_acf_sections_qubi_faq_sections",
+  "info": {
+    "displayName": "Qubi FAQ Section",
+    "description": "Eyebrow, heading, and a list of question/answer cards"
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "main_title": {
+      "type": "text"
+    },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "items": {
+      "type": "component",
+      "component": "acf-shared.qubi-faq-item",
+      "repeatable": true
+    }
+  }
+}

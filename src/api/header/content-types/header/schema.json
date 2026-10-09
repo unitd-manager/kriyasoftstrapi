@@ -1,0 +1,34 @@
+{
+  "kind": "singleType",
+  "collectionName": "headers",
+  "info": {
+    "displayName": "Header",
+    "singularName": "header",
+    "pluralName": "headers",
+    "description": "The whole site header in one place: logo, nav links, and CTA button."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "logo_link": {
+      "type": "string"
+    },
+    "nav_links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.nav-parent"
+    },
+    "cta_label": {
+      "type": "string"
+    },
+    "cta_url": {
+      "type": "string"
+    }
+  }
+}

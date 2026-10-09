@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_acf_sections_legal_page_bodies",
+  "info": {
+    "displayName": "Legal Page Body",
+    "icon": "list"
+  },
+  "options": {},
+  "attributes": {
+    "sections": {
+      "type": "component",
+      "repeatable": true,
+      "component": "acf-shared.legal-section-item"
+    }
+  }
+}

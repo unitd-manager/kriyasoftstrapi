@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_acf_shared_solutions_what_we_do_verbs",
+  "info": {
+    "displayName": "Solutions What We Do Verb"
+  },
+  "attributes": {
+    "verb": { "type": "string" },
+     "Publish": {
+  "type": "boolean",
+  "default": true
+},
+    "detail": { "type": "text" }
+  }
+}

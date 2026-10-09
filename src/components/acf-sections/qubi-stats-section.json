@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_acf_sections_qubi_stats_sections",
+  "info": {
+    "displayName": "Qubi Stats Section",
+    "description": "Horizontal bar of big stat numbers with labels"
+  },
+   "Publish": {
+  "type": "boolean",
+  "default": true
+},
+  "attributes": {
+    "stats": {
+      "type": "component",
+      "component": "acf-shared.qubi-stat-item",
+      "repeatable": true
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_acf_sections_legal_page_ctas",
+  "info": {
+    "displayName": "Legal Page CTA",
+    "icon": "arrow-right"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "link_text": {
+      "type": "string"
+    },
+    "link_url": {
+      "type": "string"
+    },
+    "after_link_text": {
+      "type": "string"
+    }
+  }
+}
