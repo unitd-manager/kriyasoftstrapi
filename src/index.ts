@@ -12,7 +12,6 @@ function readBooleanEnv(name: string, fallback: boolean) {
 function getBootstrapMaintenanceConfig() {
   return {
     runSchemaMaintenance: readBooleanEnv('STRAPI_BOOTSTRAP_SCHEMA_MAINTENANCE', false),
-    runPermissionSync: readBooleanEnv('STRAPI_BOOTSTRAP_PERMISSION_SYNC', true),
     runQueryProfiler: readBooleanEnv('STRAPI_QUERY_PROFILER', false),
   };
 }
@@ -77,8 +76,9 @@ async function runWithBootstrapRetry(
   strapi: Core.Strapi,
   label: string,
   task: () => Promise<void>,
-  maxAttempts = 3
+  options: { maxAttempts?: number; failOnError?: boolean } = {}
 ) {
+  const maxAttempts = options.maxAttempts ?? 3;
   let lastError: unknown = null;
 
   for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
@@ -98,6 +98,11 @@ async function runWithBootstrapRetry(
       );
       await new Promise((resolve) => setTimeout(resolve, delayMs));
     }
+  }
+
+  if (options.failOnError) {
+    strapi.log.error(`[bootstrap] ${label} failed after retries: ${lastError}`);
+    throw lastError;
   }
 
   strapi.log.warn(`[bootstrap] ${label} skipped after retries: ${lastError}`);
@@ -152,45 +157,94 @@ async function ensureSharedMenuItemUrlUsesText(strapi: Core.Strapi) {
   );
 }
 
-async function ensurePublicPageReadPermissions(strapi: Core.Strapi) {
+const PUBLIC_ALLOWED_ACTIONS = new Set([
+  'api::page.page.find',
+  'api::page.page.findOne',
+  'api::page.page.findBySlug',
+  'api::blog.blog.find',
+  'api::blog.blog.findOne',
+  'api::blog-category.blog-category.find',
+  'api::blog-category.blog-category.findOne',
+  'api::header.header.find',
+  'api::header.header.findOne',
+  'api::footer.footer.find',
+  'api::footer.footer.findOne',
+  'api::service.service.find',
+  'api::service.service.findOne',
+  'api::case-study.case-study.find',
+  'api::case-study.case-study.findOne',
+  'api::resource-page.resource-page.find',
+  'api::resource-page.resource-page.findOne',
+  'api::resource-page.resource-page.findBySlug',
+  'api::redirect.redirect.find',
+  'api::redirect.redirect.findOne',
+  'api::enquiry.enquiry.create',
+  'api::not-found-log.not-found-log.create',
+]);
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+async function ensurePublicRolePermissions(strapi: Core.Strapi) {
   const publicRole = await strapi.db.query('plugin::users-permissions.role').findOne({
     where: { type: 'public' },
   });
 
   if (!publicRole?.id) {
-    return;
+    throw new Error('Public role not found; refusing to start without syncing its permissions.');
   }
 
   const roleService = strapi.plugin('users-permissions').service('role');
   const role = await roleService.findOne(publicRole.id);
-  const pagePermissions = role?.permissions?.['api::page']?.controllers?.page;
-  const enquiryCreateEnabled = Boolean(
-    role?.permissions?.['api::enquiry']?.controllers?.enquiry?.create?.enabled
-  );
-
-  if (enquiryCreateEnabled) {
-    strapi.log.info('[permissions] public enquiry create enabled=true');
-  } else {
-    strapi.log.warn('[permissions] public enquiry create enabled=false');
+  if (!isRecord(role.permissions)) {
+    throw new Error('Public role permissions have an unexpected format; refusing to start.');
   }
 
-  if (!pagePermissions?.find || !pagePermissions?.findOne) {
-    return;
-  }
+  let hasChanges = false;
 
-  const shouldUpdate = !pagePermissions.find.enabled || !pagePermissions.findOne.enabled;
-  if (!shouldUpdate) {
-    return;
-  }
+  for (const [typeName, type] of Object.entries(role.permissions)) {
+    if (!isRecord(type) || !isRecord(type.controllers)) {
+      throw new Error(`Public role permissions for "${typeName}" have an unexpected format.`);
+    }
 
-  pagePermissions.find.enabled = true;
-  pagePermissions.findOne.enabled = true;
+    for (const [controllerName, controller] of Object.entries(type.controllers)) {
+      if (!isRecord(controller)) {
+        throw new Error(
+          `Public role permissions for "${typeName}.${controllerName}" have an unexpected format.`
+        );
+      }
+
+      for (const [actionName, action] of Object.entries(controller)) {
+        if (!isRecord(action) || typeof action.enabled !== 'boolean') {
+          throw new Error(
+            `Public role permission "${typeName}.${controllerName}.${actionName}" has an unexpected format.`
+          );
+        }
+
+        const shouldEnable = PUBLIC_ALLOWED_ACTIONS.has(
+          `${typeName}.${controllerName}.${actionName}`
+        );
+
+        if (action.enabled !== shouldEnable) {
+          action.enabled = shouldEnable;
+          hasChanges = true;
+        }
+      }
+    }
+  }
 
   await roleService.updateRole(publicRole.id, {
     name: role.name,
     description: role.description,
     permissions: role.permissions,
   });
+
+  strapi.log.info(
+    hasChanges
+      ? '[permissions] public role synced to the least-privilege allowlist'
+      : '[permissions] public role verified against the least-privilege allowlist'
+  );
 }
 
 async function purgeExpiredEnquiries(strapi: Core.Strapi) {
@@ -382,8 +436,7 @@ export default {
    * run jobs, or perform some special logic.
    */
   async bootstrap({ strapi }: { strapi: Core.Strapi }) {
-    const { runSchemaMaintenance, runPermissionSync, runQueryProfiler } =
-      getBootstrapMaintenanceConfig();
+    const { runSchemaMaintenance, runQueryProfiler } = getBootstrapMaintenanceConfig();
 
     if (runQueryProfiler) {
       enableQueryProfiler(strapi);
@@ -406,10 +459,13 @@ export default {
       });
     }
 
-    if (runPermissionSync) {
-      await runWithBootstrapRetry(strapi, 'public permission sync', async () => {
-        await ensurePublicPageReadPermissions(strapi);
-      });
-    }
+    await runWithBootstrapRetry(
+      strapi,
+      'public permission sync',
+      async () => {
+        await ensurePublicRolePermissions(strapi);
+      },
+      { failOnError: true }
+    );
   },
 };
