@@ -1,6 +1,6 @@
 {
   "collectionName": "components_acf_sections_qubi_services_processes",
-  "info": { "displayName": "Qubi Services Process" },
+  "info": { "displayName": "Kriyasoft Services Process" },
   "attributes": {
     "eyebrow": { "type": "string" },
     "title": { "type": "text" },

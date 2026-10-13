@@ -213,7 +213,7 @@ export interface AcfSectionsQubiAnalyticsSection
   extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_analytics_section';
   info: {
-    displayName: 'Qubi Analytics Section';
+    displayName: 'Kriyasoft Analytics Section';
   };
   attributes: {
     eyebrow: Schema.Attribute.String;
@@ -230,7 +230,7 @@ export interface AcfSectionsQubiBlogListSection extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_blog_list_sections';
   info: {
     description: 'Renders the blog articles from the Blog collection: optional featured article plus the latest-articles grid. The articles themselves are managed in Content Manager > Blog, not here.';
-    displayName: 'Qubi Blog List Section';
+    displayName: 'Kriyasoft Blog List Section';
   };
   attributes: {
     main_title: Schema.Attribute.String;
@@ -244,7 +244,7 @@ export interface AcfSectionsQubiCalloutSection extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_callout_sections';
   info: {
     description: 'Compact banner with icon, heading, and body text';
-    displayName: 'Qubi Callout Section';
+    displayName: 'Kriyasoft Callout Section';
   };
   attributes: {
     description: Schema.Attribute.Text;
@@ -258,7 +258,7 @@ export interface AcfSectionsQubiCapabilitiesSection
   extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_capabilities_section';
   info: {
-    displayName: 'Qubi Capabilities Section';
+    displayName: 'Kriyasoft Capabilities Section';
   };
   attributes: {
     capability_items: Schema.Attribute.Component<
@@ -279,7 +279,7 @@ export interface AcfSectionsQubiCaseStudiesSection
   collectionName: 'components_acf_sections_qubi_case_studies_sections';
   info: {
     description: 'Section heading plus large case-study cards with challenge, solution, quote, and result metrics';
-    displayName: 'Qubi Case Studies Section';
+    displayName: 'Kriyasoft Case Studies Section';
   };
   attributes: {
     case_studies: Schema.Attribute.Component<
@@ -296,7 +296,7 @@ export interface AcfSectionsQubiCaseStudiesSection
 export interface AcfSectionsQubiClientTicker extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_client_tickers';
   info: {
-    displayName: 'Qubi Client Ticker';
+    displayName: 'Kriyasoft Client Ticker';
   };
   attributes: {
     items: Schema.Attribute.Component<
@@ -311,7 +311,7 @@ export interface AcfSectionsQubiComparisonSection
   collectionName: 'components_acf_sections_qubi_comparison_sections';
   info: {
     description: 'Comparison table: aspect vs competitor column vs qubi column';
-    displayName: 'Qubi Comparison Section';
+    displayName: 'Kriyasoft Comparison Section';
   };
   attributes: {
     eyebrow: Schema.Attribute.String;
@@ -327,7 +327,7 @@ export interface AcfSectionsQubiComparisonSection
 export interface AcfSectionsQubiDemoPreview extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_demo_preview';
   info: {
-    displayName: 'Qubi Demo Preview';
+    displayName: 'Kriyasoft Demo Preview';
   };
   attributes: {
     Publish: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
@@ -342,7 +342,7 @@ export interface AcfSectionsQubiDifferentiatorsSection
   collectionName: 'components_acf_sections_qubi_differentiators_sections';
   info: {
     description: 'Four-column grid of check-marked cards used for "Why enterprise clients choose us"';
-    displayName: 'Qubi Differentiators Section';
+    displayName: 'Kriyasoft Differentiators Section';
   };
   attributes: {
     eyebrow: Schema.Attribute.String;
@@ -360,7 +360,7 @@ export interface AcfSectionsQubiExecutionSection
   collectionName: 'components_acf_sections_qubi_execution_sections';
   info: {
     description: 'Heading with gradient tail, three icon cards, and a highlighted callout banner';
-    displayName: 'Qubi Execution Section';
+    displayName: 'Kriyasoft Execution Section';
   };
   attributes: {
     callout_description: Schema.Attribute.Text;
@@ -377,7 +377,7 @@ export interface AcfSectionsQubiFaqSection extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_faq_sections';
   info: {
     description: 'Eyebrow, heading, and a list of question/answer cards';
-    displayName: 'Qubi FAQ Section';
+    displayName: 'Kriyasoft FAQ Section';
   };
   attributes: {
     eyebrow: Schema.Attribute.String;
@@ -390,7 +390,7 @@ export interface AcfSectionsQubiFaqSection extends Struct.ComponentSchema {
 export interface AcfSectionsQubiFinalCtaSection extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_final_cta_section';
   info: {
-    displayName: 'Qubi Final CTA Section';
+    displayName: 'Kriyasoft Final CTA Section';
   };
   attributes: {
     button: Schema.Attribute.Component<'shared.menu-item', false>;
@@ -406,7 +406,7 @@ export interface AcfSectionsQubiFinalCtaSection extends Struct.ComponentSchema {
 export interface AcfSectionsQubiHomeHero extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_home_hero';
   info: {
-    displayName: 'Qubi Home Hero';
+    displayName: 'Kriyasoft Home Hero';
   };
   attributes: {
     badge: Schema.Attribute.String;
@@ -434,7 +434,7 @@ export interface AcfSectionsQubiHomeHero extends Struct.ComponentSchema {
 export interface AcfSectionsQubiHomeServices extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_home_services';
   info: {
-    displayName: 'Qubi Home Services';
+    displayName: 'Kriyasoft Home Services';
   };
   attributes: {
     eyebrow: Schema.Attribute.String;
@@ -451,7 +451,7 @@ export interface AcfSectionsQubiHowItWorksSection
   extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_how_it_works_section';
   info: {
-    displayName: 'Qubi How It Works Section';
+    displayName: 'Kriyasoft How It Works Section';
   };
   attributes: {
     eyebrow: Schema.Attribute.String;
@@ -469,7 +469,7 @@ export interface AcfSectionsQubiHumanInLoopSection
   extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_human_in_loop';
   info: {
-    displayName: 'Qubi Human In Loop Section';
+    displayName: 'Kriyasoft Human In Loop Section';
   };
   attributes: {
     badges: Schema.Attribute.Component<
@@ -488,7 +488,7 @@ export interface AcfSectionsQubiIconGridSection extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_icon_grid_sections';
   info: {
     description: 'Centered grid of icon cards with section heading (e.g. platform components)';
-    displayName: 'Qubi Icon Grid Section';
+    displayName: 'Kriyasoft Icon Grid Section';
   };
   attributes: {
     description: Schema.Attribute.Text;
@@ -503,7 +503,7 @@ export interface AcfSectionsQubiIntegrationSection
   extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_integration_section';
   info: {
-    displayName: 'Qubi Integration Section';
+    displayName: 'Kriyasoft Integration Section';
   };
   attributes: {
     description: Schema.Attribute.RichText;
@@ -520,7 +520,7 @@ export interface AcfSectionsQubiIntegrationSection
 export interface AcfSectionsQubiOutcomesSection extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_outcomes_section';
   info: {
-    displayName: 'Qubi Outcomes Section';
+    displayName: 'Kriyasoft Outcomes Section';
   };
   attributes: {
     eyebrow: Schema.Attribute.String;
@@ -537,7 +537,7 @@ export interface AcfSectionsQubiPlansSection extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_plans_sections';
   info: {
     description: 'Pricing plan cards with feature lists and a highlight option';
-    displayName: 'Qubi Plans Section';
+    displayName: 'Kriyasoft Plans Section';
   };
   attributes: {
     cta_url: Schema.Attribute.String;
@@ -552,7 +552,7 @@ export interface AcfSectionsQubiPlansSection extends Struct.ComponentSchema {
 export interface AcfSectionsQubiProblemSection extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_problem_section';
   info: {
-    displayName: 'Qubi Problem Section';
+    displayName: 'Kriyasoft Problem Section';
   };
   attributes: {
     description: Schema.Attribute.RichText;
@@ -569,7 +569,7 @@ export interface AcfSectionsQubiServicesCapabilities
   extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_services_capabilities';
   info: {
-    displayName: 'Qubi Services Capabilities';
+    displayName: 'Kriyasoft Services Capabilities';
   };
   attributes: {
     eyebrow: Schema.Attribute.String;
@@ -584,7 +584,7 @@ export interface AcfSectionsQubiServicesCapabilities
 export interface AcfSectionsQubiServicesCta extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_services_ctas';
   info: {
-    displayName: 'Qubi Services CTA';
+    displayName: 'Kriyasoft Services CTA';
   };
   attributes: {
     button_label: Schema.Attribute.String;
@@ -599,7 +599,7 @@ export interface AcfSectionsQubiServicesCta extends Struct.ComponentSchema {
 export interface AcfSectionsQubiServicesHero extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_services_heroes';
   info: {
-    displayName: 'Qubi Services Hero';
+    displayName: 'Kriyasoft Services Hero';
   };
   attributes: {
     button_label: Schema.Attribute.String;
@@ -617,7 +617,7 @@ export interface AcfSectionsQubiServicesHero extends Struct.ComponentSchema {
 export interface AcfSectionsQubiServicesList extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_services_lists';
   info: {
-    displayName: 'Qubi Services List';
+    displayName: 'Kriyasoft Services List';
   };
   attributes: {
     description: Schema.Attribute.RichText;
@@ -634,7 +634,7 @@ export interface AcfSectionsQubiServicesList extends Struct.ComponentSchema {
 export interface AcfSectionsQubiServicesProcess extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_services_processes';
   info: {
-    displayName: 'Qubi Services Process';
+    displayName: 'Kriyasoft Services Process';
   };
   attributes: {
     eyebrow: Schema.Attribute.String;
@@ -650,7 +650,7 @@ export interface AcfSectionsQubiSimpleHero extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_simple_heroes';
   info: {
     description: 'Centered text-only page hero: badge, title, description';
-    displayName: 'Qubi Simple Hero';
+    displayName: 'Kriyasoft Simple Hero';
   };
   attributes: {
     badge_text: Schema.Attribute.String;
@@ -664,7 +664,7 @@ export interface AcfSectionsQubiStatsSection extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_stats_sections';
   info: {
     description: 'Horizontal bar of big stat numbers with labels';
-    displayName: 'Qubi Stats Section';
+    displayName: 'Kriyasoft Stats Section';
   };
   attributes: {
     stats: Schema.Attribute.Component<'acf-shared.qubi-stat-item', true>;
@@ -675,7 +675,7 @@ export interface AcfSectionsQubiStorySection extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_story_sections';
   info: {
     description: 'Eyebrow, heading, story paragraphs, and a row of stat cards';
-    displayName: 'Qubi Story Section';
+    displayName: 'Kriyasoft Story Section';
   };
   attributes: {
     button_label: Schema.Attribute.String;
@@ -700,7 +700,7 @@ export interface AcfSectionsQubiSubscribeCtaSection
   collectionName: 'components_acf_sections_qubi_subscribe_cta_sections';
   info: {
     description: 'Centered heading, supporting text, and a single action button on a tinted band';
-    displayName: 'Qubi Subscribe CTA Section';
+    displayName: 'Kriyasoft Subscribe CTA Section';
   };
   attributes: {
     button: Schema.Attribute.Component<'shared.menu-item', false>;
@@ -713,7 +713,7 @@ export interface AcfSectionsQubiSubscribeCtaSection
 export interface AcfSectionsQubiUseCasesSection extends Struct.ComponentSchema {
   collectionName: 'components_acf_sections_qubi_use_cases_section';
   info: {
-    displayName: 'Qubi Use Cases Section';
+    displayName: 'Kriyasoft Use Cases Section';
   };
   attributes: {
     eyebrow: Schema.Attribute.String;
@@ -1028,7 +1028,7 @@ export interface AcfSharedQubiAnalyticsSectionFeatures
   extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_analytics_features';
   info: {
-    displayName: 'Qubi Analytics Section Features';
+    displayName: 'Kriyasoft Analytics Section Features';
   };
   attributes: {
     description: Schema.Attribute.RichText;
@@ -1042,7 +1042,7 @@ export interface AcfSharedQubiCapabilitiesSectionCapabilityItems
   extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_capability_items';
   info: {
-    displayName: 'Qubi Capabilities Section Capability Items';
+    displayName: 'Kriyasoft Capabilities Section Capability Items';
   };
   attributes: {
     description: Schema.Attribute.RichText;
@@ -1060,7 +1060,7 @@ export interface AcfSharedQubiCapabilitiesSectionCapabilityItems
 export interface AcfSharedQubiCaseMetric extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_case_metrics';
   info: {
-    displayName: 'Qubi Case Metric';
+    displayName: 'Kriyasoft Case Metric';
   };
   attributes: {
     label: Schema.Attribute.String;
@@ -1077,7 +1077,7 @@ export interface AcfSharedQubiCaseMetric extends Struct.ComponentSchema {
 export interface AcfSharedQubiCaseStudy extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_case_studies';
   info: {
-    displayName: 'Qubi Case Study';
+    displayName: 'Kriyasoft Case Study';
   };
   attributes: {
     challenge: Schema.Attribute.Text;
@@ -1096,7 +1096,7 @@ export interface AcfSharedQubiCaseStudy extends Struct.ComponentSchema {
 export interface AcfSharedQubiClientTickerItem extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_client_ticker_items';
   info: {
-    displayName: 'Qubi Client Ticker Item';
+    displayName: 'Kriyasoft Client Ticker Item';
   };
   attributes: {
     logo: Schema.Attribute.String;
@@ -1108,7 +1108,7 @@ export interface AcfSharedQubiClientTickerItem extends Struct.ComponentSchema {
 export interface AcfSharedQubiComparisonRow extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_comparison_rows';
   info: {
-    displayName: 'Qubi Comparison Row';
+    displayName: 'Kriyasoft Comparison Row';
   };
   attributes: {
     aspect: Schema.Attribute.String;
@@ -1123,7 +1123,7 @@ export interface AcfSharedQubiDifferentiatorItem
   collectionName: 'components_acf_shared_qubi_differentiator_items';
   info: {
     description: 'Single check-marked card item used inside the differentiators ("Why enterprise clients choose us") section';
-    displayName: 'Qubi Differentiator Item';
+    displayName: 'Kriyasoft Differentiator Item';
   };
   attributes: {
     description: Schema.Attribute.Text;
@@ -1135,7 +1135,7 @@ export interface AcfSharedQubiDifferentiatorItem
 export interface AcfSharedQubiFaqItem extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_faq_items';
   info: {
-    displayName: 'Qubi FAQ Item';
+    displayName: 'Kriyasoft FAQ Item';
   };
   attributes: {
     answer: Schema.Attribute.Text;
@@ -1148,7 +1148,7 @@ export interface AcfSharedQubiHomeHeroSnapshotItem
   extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_home_hero_snapshot_items';
   info: {
-    displayName: 'Qubi Home Hero Snapshot Item';
+    displayName: 'Kriyasoft Home Hero Snapshot Item';
   };
   attributes: {
     color: Schema.Attribute.String;
@@ -1162,7 +1162,7 @@ export interface AcfSharedQubiHomeHeroSnapshotItem
 export interface AcfSharedQubiHomeServicesItem extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_home_services_items';
   info: {
-    displayName: 'Qubi Home Services Item';
+    displayName: 'Kriyasoft Home Services Item';
   };
   attributes: {
     description: Schema.Attribute.Text;
@@ -1179,7 +1179,7 @@ export interface AcfSharedQubiHowItWorksSectionSteps
   extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_hiw_steps';
   info: {
-    displayName: 'Qubi How It Works Section Steps';
+    displayName: 'Kriyasoft How It Works Section Steps';
   };
   attributes: {
     description: Schema.Attribute.RichText;
@@ -1194,7 +1194,7 @@ export interface AcfSharedQubiHumanInLoopSectionBadges
   extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_hil_badges';
   info: {
-    displayName: 'Qubi Human In Loop Section Badges';
+    displayName: 'Kriyasoft Human In Loop Section Badges';
   };
   pluginOptions: {
     'content-manager': {
@@ -1210,7 +1210,7 @@ export interface AcfSharedQubiHumanInLoopSectionBadges
 export interface AcfSharedQubiIconCardItem extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_icon_card_items';
   info: {
-    displayName: 'Qubi Icon Card Item';
+    displayName: 'Kriyasoft Icon Card Item';
   };
   attributes: {
     description: Schema.Attribute.Text;
@@ -1226,7 +1226,7 @@ export interface AcfSharedQubiIntegrationSectionIntegrationItems
   extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_integration_items';
   info: {
-    displayName: 'Qubi Integration Section Integration Items';
+    displayName: 'Kriyasoft Integration Section Integration Items';
   };
   attributes: {
     count: Schema.Attribute.String;
@@ -1240,7 +1240,7 @@ export interface AcfSharedQubiOutcomesSectionOutcomeItems
   extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_outcome_items';
   info: {
-    displayName: 'Qubi Outcomes Section Outcome Items';
+    displayName: 'Kriyasoft Outcomes Section Outcome Items';
   };
   attributes: {
     description: Schema.Attribute.RichText;
@@ -1253,7 +1253,7 @@ export interface AcfSharedQubiOutcomesSectionOutcomeItems
 export interface AcfSharedQubiPlanItem extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_plan_items';
   info: {
-    displayName: 'Qubi Plan Item';
+    displayName: 'Kriyasoft Plan Item';
   };
   attributes: {
     cta_label: Schema.Attribute.String;
@@ -1272,7 +1272,7 @@ export interface AcfSharedQubiProblemSectionProblemItems
   extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_problem_items';
   info: {
-    displayName: 'Qubi Problem Section Problem Items';
+    displayName: 'Kriyasoft Problem Section Problem Items';
   };
   attributes: {
     icon: Schema.Attribute.String;
@@ -1285,7 +1285,7 @@ export interface AcfSharedQubiServicesCapabilitiesItem
   extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_services_capabilities_items';
   info: {
-    displayName: 'Qubi Services Capabilities Item';
+    displayName: 'Kriyasoft Services Capabilities Item';
   };
   attributes: {
     description: Schema.Attribute.Text;
@@ -1301,7 +1301,7 @@ export interface AcfSharedQubiServicesHeroHighlight
   extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_services_hero_highlights';
   info: {
-    displayName: 'Qubi Services Hero Highlight';
+    displayName: 'Kriyasoft Services Hero Highlight';
   };
   attributes: {
     description: Schema.Attribute.Text;
@@ -1314,7 +1314,7 @@ export interface AcfSharedQubiServicesHeroHighlight
 export interface AcfSharedQubiServicesListItem extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_services_list_items';
   info: {
-    displayName: 'Qubi Services List Item';
+    displayName: 'Kriyasoft Services List Item';
   };
   attributes: {
     blurb: Schema.Attribute.String;
@@ -1330,7 +1330,7 @@ export interface AcfSharedQubiServicesProcessItem
   extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_services_process_items';
   info: {
-    displayName: 'Qubi Services Process Item';
+    displayName: 'Kriyasoft Services Process Item';
   };
   attributes: {
     description: Schema.Attribute.Text;
@@ -1343,7 +1343,7 @@ export interface AcfSharedQubiServicesProcessItem
 export interface AcfSharedQubiStatItem extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_stat_items';
   info: {
-    displayName: 'Qubi Stat Item';
+    displayName: 'Kriyasoft Stat Item';
   };
   pluginOptions: {
     'content-manager': {
@@ -1359,7 +1359,7 @@ export interface AcfSharedQubiStatItem extends Struct.ComponentSchema {
 export interface AcfSharedQubiTestimonialItem extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_testimonial_items';
   info: {
-    displayName: 'Qubi Testimonial Item';
+    displayName: 'Kriyasoft Testimonial Item';
   };
   attributes: {
     company: Schema.Attribute.String;
@@ -1374,7 +1374,7 @@ export interface AcfSharedQubiTestimonialItem extends Struct.ComponentSchema {
 export interface AcfSharedQubiTextParagraph extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_text_paragraphs';
   info: {
-    displayName: 'Qubi Text Paragraph';
+    displayName: 'Kriyasoft Text Paragraph';
   };
   pluginOptions: {
     'content-manager': {
@@ -1391,7 +1391,7 @@ export interface AcfSharedQubiUseCasesSectionUseCaseItems
   extends Struct.ComponentSchema {
   collectionName: 'components_acf_shared_qubi_use_case_items';
   info: {
-    displayName: 'Qubi Use Cases Section Use Case Items';
+    displayName: 'Kriyasoft Use Cases Section Use Case Items';
   };
   attributes: {
     description: Schema.Attribute.RichText;

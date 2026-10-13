@@ -1,7 +1,7 @@
 {
   "collectionName": "components_acf_shared_qubi_services_process_items",
   "info": {
-    "displayName": "Qubi Services Process Item"
+    "displayName": "Kriyasoft Services Process Item"
   },
   "attributes": {
     "step": { "type": "string" },

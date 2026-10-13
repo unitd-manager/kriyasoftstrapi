@@ -1,7 +1,7 @@
 {
   "collectionName": "components_acf_shared_qubi_testimonial_items",
   "info": {
-    "displayName": "Qubi Testimonial Item"
+    "displayName": "Kriyasoft Testimonial Item"
   },
   "attributes": {
     "quote": { "type": "text" },

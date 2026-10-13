@@ -1,7 +1,7 @@
 {
   "collectionName": "components_acf_shared_qubi_client_ticker_items",
   "info": {
-    "displayName": "Qubi Client Ticker Item"
+    "displayName": "Kriyasoft Client Ticker Item"
   },
   "attributes": {
     "name": { "type": "string" },

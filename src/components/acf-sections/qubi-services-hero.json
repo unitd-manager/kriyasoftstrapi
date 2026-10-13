@@ -1,6 +1,6 @@
 {
   "collectionName": "components_acf_sections_qubi_services_heroes",
-  "info": { "displayName": "Qubi Services Hero" },
+  "info": { "displayName": "Kriyasoft Services Hero" },
   "attributes": {
     "eyebrow": { "type": "string" },
     "title": { "type": "text" },

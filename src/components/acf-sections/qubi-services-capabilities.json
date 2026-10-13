@@ -1,6 +1,6 @@
 {
   "collectionName": "components_acf_sections_qubi_services_capabilities",
-  "info": { "displayName": "Qubi Services Capabilities" },
+  "info": { "displayName": "Kriyasoft Services Capabilities" },
   "attributes": {
     "eyebrow": { "type": "string" },
     "title": { "type": "text" },
