@@ -42,6 +42,7 @@ export default ({ env }) => {
                   region,
                   params: {
                     Bucket: bucket,
+                    ACL: undefined,
                   },
                 },
               },
