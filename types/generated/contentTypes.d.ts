@@ -569,7 +569,7 @@ export interface ApiEnquiryEnquiry extends Struct.CollectionTypeSchema {
     singularName: 'enquiry';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     address_country: Schema.Attribute.String;

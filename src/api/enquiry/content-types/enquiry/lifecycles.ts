@@ -1,6 +1,25 @@
+const escapeHtml = (value: unknown) =>
+  String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+
 export default {
   async afterCreate(event) {
     const { result } = event;
+    const name = result.name || 'Not provided';
+    const email = result.email || 'Not provided';
+    const enquiryType =
+      result.enquiry_type || 'Website Contact Form';
+    const comments = result.comments || '';
+    const subjectName = String(
+      result.name || 'Website visitor'
+    ).replace(/[\r\n]+/g, ' ').trim();
+    const subject = `New contact enquiry from ${subjectName}`
+      .slice(0, 120)
+      .trim();
 
     try {
       await strapi.plugin('email').service('email').send({
@@ -8,21 +27,17 @@ export default {
 
         replyTo: result.email,
 
-        subject: `New contact enquiry from ${
-          result.name || 'Website visitor'
-        }`,
+        subject,
 
         text: `
 New contact form enquiry
 
-Name: ${result.name || 'Not provided'}
-Email: ${result.email || 'Not provided'}
-Enquiry Type: ${
-          result.enquiry_type || 'Website Contact Form'
-        }
+Name: ${name}
+Email: ${email}
+Enquiry Type: ${enquiryType}
 
 Message:
-${result.comments || 'No message provided'}
+${comments || 'No message provided'}
         `,
 
         html: `
@@ -30,29 +45,23 @@ ${result.comments || 'No message provided'}
 
           <p>
             <strong>Name:</strong>
-            ${result.name || 'Not provided'}
+            ${escapeHtml(name)}
           </p>
 
           <p>
             <strong>Email:</strong>
-            ${result.email || 'Not provided'}
+            ${escapeHtml(email)}
           </p>
 
           <p>
             <strong>Enquiry Type:</strong>
-            ${
-              result.enquiry_type ||
-              'Website Contact Form'
-            }
+            ${escapeHtml(enquiryType)}
           </p>
 
           <h3>Message</h3>
 
           <p>
-            ${String(result.comments || '').replace(
-              /\n/g,
-              '<br />'
-            )}
+            ${escapeHtml(comments).replace(/\r\n|\r|\n/g, '<br />')}
           </p>
         `,
       });
